@@ -965,6 +965,8 @@
               <div class="profile-meta">
                 <div><small>Name</small><span>${text(data.person?.name)} / ${formatRoman(data.person?.roman)}</span></div>
                 <div><small>Period</small><span>${text(data.person?.period)}</span></div>
+                <div><small>Coursework</small><span>${text(data.person?.coursework, "已修读课程 24 门，其中必修课 17 门")}</span></div>
+                <div><small>Role Fit</small><span>资料调研 / 文案整合 / 路演辅助 / 人员协调</span></div>
                 <div><small>PDF</small><span>${pdf.label}</span></div>
                 <div><small>Links</small><span>${[github, moon, guang].filter(Boolean).map((item) => item.label).join(" / ") || "Project links"}</span></div>
               </div>
@@ -972,7 +974,7 @@
             <div class="list-panel">
               <h3>Honors / Practice</h3>
               <ul class="award-list" aria-label="奖项">${(data.awards || []).slice(0, 8).map((award, index) => `<li><b>${String(index + 1).padStart(2, "0")}</b><span>${text(award)}</span></li>`).join("")}</ul>
-              <ul class="role-list" aria-label="经历">${[...(data.leadership || []), ...(data.practice || [])].slice(0, 6).map((role, index) => `<li><b>${String(index + 1).padStart(2, "0")}</b><span>${text(role.role || role.name)}<small>${text(role.period)}${role.name && role.role ? ` / ${text(role.role)}` : ""}</small></span></li>`).join("")}</ul>
+              <ul class="role-list" aria-label="经历">${[...(data.leadership || []), ...(data.practice || [])].slice(0, 7).map((role, index) => `<li><b>${String(index + 1).padStart(2, "0")}</b><span>${text(role.name || role.role)}<small>${text(role.period)}${role.name && role.role ? ` / ${text(role.role)}` : ""}</small></span></li>`).join("")}</ul>
             </div>
           </div>
         </section>

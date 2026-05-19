@@ -804,8 +804,16 @@
               <strong data-field="period">2024.09 - 2028.07</strong>
             </div>
             <div class="profile-item">
+              <span>Coursework</span>
+              <strong data-field="coursework">已修读课程 24 门，其中必修课 17 门</strong>
+            </div>
+            <div class="profile-item">
               <span>Focus</span>
               <strong>AI systems / simulation / delivery</strong>
+            </div>
+            <div class="profile-item">
+              <span>Role Fit</span>
+              <strong>调研 / 文案 / 路演 / 协调</strong>
             </div>
           </div>
         </aside>
@@ -956,6 +964,7 @@
       const education = document.getElementById("education");
       [
         { label: text(person.title, "教育背景"), detail: text(person.program, "") },
+        { label: "课程基础", detail: text(person.coursework, "") },
         { label: "在读阶段", detail: text(person.period, "") },
         { label: "个人定位", detail: text(person.positioning, "") }
       ].forEach((item) => {

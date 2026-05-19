@@ -254,7 +254,7 @@
       position: relative;
       z-index: 1;
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 12px;
       border-top: 2px solid var(--ink);
       padding-top: 16px;
@@ -928,6 +928,10 @@
               <strong id="personProgram">Loading portfolio data</strong>
             </div>
             <div class="meta-block">
+              <small>Coursework</small>
+              <strong id="personCoursework">Loading coursework</strong>
+            </div>
+            <div class="meta-block">
               <small>Positioning</small>
               <strong id="personPosition">AI / Engineering / Visual Systems</strong>
             </div>
@@ -1030,6 +1034,7 @@
         const facts = [
           ["Name", [safe(person.name), safe(person.roman)].filter(Boolean).join(" / ") || "JavonLoong"],
           ["Period", safe(person.period, "2024.09 - 2028.07")],
+          ["Coursework", safe(person.coursework, "已修读课程 24 门，其中必修课 17 门")],
           ["Cases", `${projects.length || 6} selected works`],
           ["Mode", "Portfolio cover + horizontal case narrative"]
         ];
@@ -1118,6 +1123,7 @@
       setText("#navName", `${safe(person.roman, "JavonLoong")} Portfolio`);
       setText("#personName", [safe(person.name), safe(person.roman)].filter(Boolean).join(" / ") || "JavonLoong");
       setText("#personProgram", safe(person.program, "AI application engineering portfolio"));
+      setText("#personCoursework", safe(person.coursework, "已修读课程 24 门，其中必修课 17 门"));
       setText("#personPosition", safe(person.positioning, "AI / Engineering / Visual Systems"));
       setText("#coverSubtitle", safe(person.statement, "AI application engineering shown as case-study spreads."));
       setText("#footerLine", `Variant 03 / ${safe(person.roman, "JavonLoong")} / 2021 Portfolio Case Studies`);

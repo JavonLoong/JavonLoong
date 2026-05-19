@@ -20,7 +20,7 @@
 
 ## 个人定位
 
-清华大学行健书院本科生。关注 **AI 应用工程、RAG / GraphRAG、工程仿真复刻、产品原型、3D 参数化建模和视觉表达**。
+清华大学行健书院大二本科生，修读 **理论与应用力学 + 能源与动力工程双学位**；已修读课程 24 门，其中必修课 17 门。关注 **AI 应用工程、RAG / GraphRAG、工程仿真复刻、产品原型、3D 参数化建模和视觉表达**。
 
 我用 AI 的重点不是“让模型替我写”，而是把模糊任务拆成资料检索、数据清洗、Prompt / Skill / SOP、Agent 分工、工具调用、代码实现、测试验证和 PPT / PDF 交付的闭环。
 
@@ -32,6 +32,7 @@
 | 工程实现 | Python、FastAPI、ChromaDB、React、Vite、Three.js、HTML/CSS/JavaScript、LaTeX、GitHub Pages |
 | 仿真与数据 | COMSOL 气动极线、AWES 高空风能复刻、数据清洗、向量检索、benchmark、日志与可审计材料组织 |
 | 表达交付 | PPT 制作、图像生成与重绘、汇报材料整理、产品概念书、竞品分析、公开网页演示 |
+| 调研与转化 | 资料调研、方案逻辑梳理、文案整合、路演辅助、人员协调；能把复杂内容拆解为清晰表达 |
 
 ## 精选项目
 
@@ -63,3 +64,13 @@
 - `variants/01-*.html` 到 `variants/05-*.html`：五个 Behance 参考方向的网页简历变体。
 - `resume/javon-ai-resume.pdf`：A4 单页 PDF 简历。
 - `resume/javon-ai-resume.tex`：可编辑 LaTeX 简历源码。
+
+## 内容参考
+
+当前网页简历内容参考了以下本地 DOCX 文件：
+
+- `D:/虚拟C盘/研学简历纪文龙.docx`
+- `D:/虚拟C盘/纪文龙2024012842简历.docx`
+- `D:/虚拟C盘/纪文龙.docx`
+
+`~$` 开头的文件是 Word/WPS 临时锁文件，不作为正文来源。
