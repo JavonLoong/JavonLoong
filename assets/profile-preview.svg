@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">纪文龙 AI 应用工程作品集</title>
+  <desc id="desc">白底、墨色与低饱和青绿色构成的个人主页视觉头图。</desc>
+  <rect width="1200" height="360" rx="16" fill="#f7f6f2"/>
+  <rect x="34" y="34" width="1132" height="292" rx="12" fill="#ffffff" stroke="#d9d8d2"/>
+  <rect x="34" y="34" width="8" height="292" rx="4" fill="#1d7068"/>
+
+  <text x="76" y="105" font-family="Arial, Microsoft YaHei, sans-serif" font-size="24" font-weight="700" fill="#1d7068">AI Application Engineering Portfolio</text>
+  <text x="76" y="176" font-family="Arial, Microsoft YaHei, sans-serif" font-size="64" font-weight="800" fill="#242424">纪文龙 · JavonLoong</text>
+  <text x="80" y="226" font-family="Arial, Microsoft YaHei, sans-serif" font-size="25" fill="#5d646c">清华大学行健书院本科生 · RAG / GraphRAG · 工程仿真复刻 · 产品原型 · 视觉表达</text>
+
+  <g transform="translate(78 258)">
+    <rect width="158" height="38" rx="19" fill="#e7f1ef"/>
+    <text x="79" y="25" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1d7068">MCP / Tools</text>
+  </g>
+  <g transform="translate(250 258)">
+    <rect width="144" height="38" rx="19" fill="#f2eadb"/>
+    <text x="72" y="25" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#8d692f">Skill / SOP</text>
+  </g>
+  <g transform="translate(408 258)">
+    <rect width="128" height="38" rx="19" fill="#e8eef4"/>
+    <text x="64" y="25" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#305b87">Agent</text>
+  </g>
+  <g transform="translate(550 258)">
+    <rect width="178" height="38" rx="19" fill="#e7f1ef"/>
+    <text x="89" y="25" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1d7068">RAG / GraphRAG</text>
+  </g>
+
+  <g transform="translate(820 86)">
+    <rect width="270" height="36" rx="6" fill="#ffffff" stroke="#d9d8d2"/>
+    <circle cx="26" cy="18" r="5" fill="#1d7068"/>
+    <text x="46" y="24" font-family="Arial, Microsoft YaHei, sans-serif" font-size="15" fill="#242424">动力装备知识库控制台</text>
+
+    <rect y="54" width="270" height="36" rx="6" fill="#ffffff" stroke="#d9d8d2"/>
+    <circle cx="26" cy="72" r="5" fill="#305b87"/>
+    <text x="46" y="78" font-family="Arial, Microsoft YaHei, sans-serif" font-size="15" fill="#242424">AWES / COMSOL 仿真复刻</text>
+
+    <rect y="108" width="270" height="36" rx="6" fill="#ffffff" stroke="#d9d8d2"/>
+    <circle cx="26" cy="126" r="5" fill="#8d692f"/>
+    <text x="46" y="132" font-family="Arial, Microsoft YaHei, sans-serif" font-size="15" fill="#242424">步步智能伴学系统</text>
+
+    <rect y="162" width="270" height="36" rx="6" fill="#ffffff" stroke="#d9d8d2"/>
+    <circle cx="26" cy="180" r="5" fill="#1d7068"/>
+    <text x="46" y="186" font-family="Arial, Microsoft YaHei, sans-serif" font-size="15" fill="#242424">MoonCake Studio / Guang</text>
+  </g>
+</svg>

@@ -1,0 +1,141 @@
+\documentclass[UTF8,zihao=false]{ctexart}
+
+\usepackage[a4paper,top=10mm,bottom=10mm,left=12mm,right=12mm]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setCJKmainfont{Microsoft YaHei}
+\setCJKsansfont{Microsoft YaHei}
+\setmainfont{Arial}
+\setsansfont{Arial}
+
+\definecolor{ink}{HTML}{222222}
+\definecolor{muted}{HTML}{5D646C}
+\definecolor{accent}{HTML}{1D6F68}
+\definecolor{line}{HTML}{D8D8D8}
+\hypersetup{colorlinks=true,urlcolor=accent}
+
+\color{ink}
+\renewcommand{\arraystretch}{1.08}
+\setlist[itemize]{
+  leftmargin=1.12em,
+  topsep=0pt,
+  partopsep=0pt,
+  parsep=0pt,
+  itemsep=0pt
+}
+
+\newcommand{\sectiontitle}[1]{%
+  \vspace{3.2pt}
+  {\fontsize{10.7pt}{12.4pt}\selectfont\bfseries\color{accent}#1}\par
+  \vspace{-3pt}
+  \textcolor{line}{\rule{\linewidth}{0.45pt}}
+  \vspace{1pt}
+}
+
+\newcommand{\entry}[3]{%
+  {\fontsize{9.35pt}{10.7pt}\selectfont\bfseries #1}%
+  \hfill
+  {\fontsize{8.25pt}{9.7pt}\selectfont\color{muted}#2}\par
+  {\fontsize{8.35pt}{9.7pt}\selectfont\color{muted}#3}\par
+}
+
+\newcommand{\project}[4]{%
+  \vspace{1.3pt}
+  {\fontsize{8.95pt}{10.4pt}\selectfont\bfseries #1}
+  \hfill
+  {\fontsize{7.95pt}{9.2pt}\selectfont\color{muted}#2}\par
+  {\fontsize{8.05pt}{9.3pt}\selectfont\color{muted}#3}\par
+  \begin{itemize}
+    #4
+  \end{itemize}
+}
+
+\newcommand{\skillrow}[2]{%
+  {\fontsize{8.35pt}{9.7pt}\selectfont\bfseries #1} &
+  {\fontsize{8.35pt}{9.7pt}\selectfont #2}\\
+}
+
+\begin{document}
+
+\begin{minipage}[t]{0.44\linewidth}
+{\fontsize{23pt}{26pt}\selectfont\bfseries 纪文龙}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.54\linewidth}
+\raggedleft
+{\fontsize{8.7pt}{10.4pt}\selectfont
+GitHub：\href{https://github.com/JavonLoong}{JavonLoong}\quad
+邮箱 / 电话：待补充\\
+公开作品：\href{https://javonloong.github.io/RAG/}{RAG 控制台}\quad
+\href{https://javonloong.github.io/Mooncake-Modle/}{MoonCake Studio}\quad
+\href{https://javonloong.github.io/guang-website/}{Guang}}
+\end{minipage}
+
+\vspace{3pt}
+{\fontsize{9.75pt}{11.2pt}\selectfont
+清华大学行健书院本科生 \quad | \quad AI 应用工程 / 工程仿真复刻 / 产品原型 / 视觉表达
+}
+
+\sectiontitle{个人定位}
+{\fontsize{8.45pt}{9.9pt}\selectfont
+以 AI 协作完成工程原型和研究交付：能把模糊需求拆成资料检索、数据清洗、Prompt / Skill / SOP、Agent 分工、工具调用、代码实现、测试验证和 PPT / PDF 交付的闭环。
+}
+
+\sectiontitle{教育背景}
+\entry{清华大学，行健书院，本科生}{2024.09 -- 2028.07}{方向与兴趣：AI 应用工程、知识库 / RAG、工程仿真、交互原型、视觉表达}
+
+\sectiontitle{AI 与工程能力}
+\begin{tabularx}{\linewidth}{@{}p{24mm}X@{}}
+\skillrow{AI 协作}{Prompt 设计、CoT 任务拆解、Few-shot 风格控制、MCP / 函数调用、Skill / SOP 沉淀、Agent 分工与审核}
+\skillrow{工程实现}{Python、FastAPI、ChromaDB、React、Vite、Three.js、HTML/CSS/JavaScript、LaTeX、GitHub Pages}
+\skillrow{仿真与数据}{COMSOL 气动极线、AWES 高空风能复刻、数据清洗、向量检索、benchmark、日志与可审计材料组织}
+\skillrow{表达交付}{PPT 制作、图像生成与重绘、汇报材料整理、产品概念书、竞品分析、公开网页演示}
+\end{tabularx}
+
+\sectiontitle{项目经历}
+\project{动力装备知识库控制台}{RAG / GraphRAG 预研，公开演示：\href{https://javonloong.github.io/RAG/}{javonloong.github.io/RAG}}
+{关键词：FastAPI、ChromaDB、向量检索、前端控制台、Graph construction}
+{
+  \item 搭建前端上传、入库、检索、benchmark、日志查看控制台；用 FastAPI / Chroma 管理文档切片、索引和运行数据。
+  \item 围绕 6098 页动力装备资料完成可审计处理，沉淀 593 条 chunk，推进普通 RAG 到 GraphRAG / 知识图谱构建的前置实验。
+}
+
+\project{高空风能 AWES / COMSOL 仿真复刻}{工程仿真与软件闭环}
+{关键词：COMSOL、Python 主仿真、八字轨迹、张力 / 功率曲线、pumping cycle}
+{
+  \item 复刻八字形轨迹、系留绳张力、功率曲线和 pumping-cycle 能量账本，将 COMSOL 气动极线接入 Python 主仿真。
+  \item 搭建 42-case 软件闭环和汇报材料，保留 COMSOL 与 Python 各自承担的证据边界，避免过度包装成完整物理求解。
+}
+
+\project{“步步”智能伴学系统}{教育 AI 产品原型}
+{关键词：AI + SOP、执行力训练、学生端、教师 / 家长看板}
+{
+  \item 设计执行力训练型学习产品：锁步任务、拍照提交、AI 判断、教师 / 家长看板；形成概念书、竞品分析、Android 学生端原型与业务流程。
+}
+
+\project{美育图像与 PPT 制作}{视觉判断与汇报交付}
+{关键词：图像生成、页面重绘、contact sheet、风格一致性、PPT 汇报}
+{
+  \item 基于“美育 / 薪火计划”等材料完成素材筛选、生成图像、页面重绘、contact sheet 核对和 PPT 整理，重点体现审美判断、版式控制和风格一致性。
+}
+
+\project{MoonCake Studio 月饼模具设计器}{3D 参数化建模，公开演示：\href{https://javonloong.github.io/Mooncake-Modle/}{MoonCake Studio}}
+{关键词：Three.js、参数化建模、实时预览、STL / GLB 导出}
+{
+  \item 实现浏览器端 3D 月饼模具自定义工具，支持边缘轮廓、传统花纹、中文刻字、图片浮雕、成品 / 模具双视图预览和 STL / GLB 导出。
+}
+
+\project{Guang 技术知识网站}{公开内容系统，公开演示：\href{https://javonloong.github.io/guang-website/}{guang-website}}
+{关键词：React、Vite、Markdown、内容组织、GitHub Pages}
+{
+  \item 搭建 React + Vite + Markdown 的公开知识网站，包含文章、标签、路由、卡片和 GitHub Pages 部署，将学习记录整理为可持续更新的内容系统。
+}
+
+\end{document}
