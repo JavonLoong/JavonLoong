@@ -1,0 +1,1067 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Variant 05 | Formal CV</title>
+  <meta name="description" content="纪文龙的正式在线 CV，聚焦教育背景、荣誉奖项、社会经历、海外实践、志愿服务与 AI / 工程项目。">
+  <style>
+    :root {
+      --page: #eef0ec;
+      --paper: #ffffff;
+      --ink: #1f2423;
+      --muted: #626b68;
+      --quiet: #8c9692;
+      --line: #d7ddd9;
+      --line-strong: #aeb8b3;
+      --panel: #f6f8f6;
+      --green: #20584f;
+      --wine: #8c3c3f;
+      --gold: #a5752e;
+      --blue: #385f7b;
+      --shadow: 0 24px 70px rgba(31, 36, 35, 0.10);
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      background: var(--page);
+      color: var(--ink);
+      font-family: Arial, "Microsoft YaHei", "PingFang SC", sans-serif;
+      line-height: 1.62;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--green);
+    }
+
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid var(--line);
+      background: rgba(238, 240, 236, 0.94);
+      backdrop-filter: blur(14px);
+    }
+
+    .site-nav-inner {
+      width: min(1180px, calc(100% - 32px));
+      min-width: 0;
+      margin: 0 auto;
+      padding: 12px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      padding: 0 12px;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .variant-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 6px;
+      min-width: 0;
+    }
+
+    .variant-links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: 0 10px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .variant-links a:hover,
+    .variant-links a[aria-current="page"] {
+      border-color: var(--line-strong);
+      background: var(--paper);
+      color: var(--ink);
+    }
+
+    .page {
+      width: min(1180px, calc(100% - 32px));
+      min-width: 0;
+      margin: 28px auto 46px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .cv {
+      display: grid;
+      grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
+      min-width: 0;
+    }
+
+    .sidebar {
+      min-width: 0;
+      border-right: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .main {
+      min-width: 0;
+      background: var(--paper);
+    }
+
+    .identity {
+      padding: 34px 28px 28px;
+      border-bottom: 1px solid var(--line);
+      background: var(--green);
+      color: #fff;
+    }
+
+    .kicker {
+      margin: 0 0 16px;
+      color: rgba(255, 255, 255, 0.74);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      overflow-wrap: anywhere;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", "Songti SC", "SimSun", serif;
+      font-size: clamp(42px, 6vw, 72px);
+      font-weight: 500;
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .roman {
+      display: block;
+      margin-top: 10px;
+      color: rgba(255, 255, 255, 0.80);
+      font-family: Arial, "Helvetica Neue", sans-serif;
+      font-size: clamp(22px, 3vw, 32px);
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    .identity p {
+      margin: 20px 0 0;
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 14px;
+    }
+
+    .side-block {
+      padding: 24px 28px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .side-block h2 {
+      margin: 0 0 14px;
+      color: var(--green);
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .facts,
+    .links,
+    .skills,
+    .metrics {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .facts li {
+      display: grid;
+      gap: 3px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .facts li:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .label {
+      color: var(--quiet);
+      font-size: 12px;
+    }
+
+    .value {
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .links a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      min-height: 38px;
+      padding: 0 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .links a::after {
+      content: "↗";
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    .skill-item {
+      padding-bottom: 13px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .skill-item:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .skill-item strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--ink);
+      font-size: 14px;
+    }
+
+    .skill-item span {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.58;
+    }
+
+    .metrics {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .metrics li {
+      min-height: 86px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+    }
+
+    .metric-number {
+      display: block;
+      color: var(--wine);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .metric-label {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .hero {
+      padding: clamp(32px, 5vw, 58px) clamp(26px, 5vw, 62px) 34px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 24px;
+      min-width: 0;
+    }
+
+    .doc-title {
+      min-width: 0;
+    }
+
+    .doc-title span {
+      display: block;
+      color: var(--wine);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .doc-title h2 {
+      margin: 8px 0 0;
+      font-family: Georgia, "Times New Roman", "Songti SC", "SimSun", serif;
+      font-size: clamp(40px, 6vw, 76px);
+      font-weight: 500;
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .date-stamp {
+      flex: 0 0 auto;
+      width: 132px;
+      min-height: 132px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line-strong);
+      border-radius: 50%;
+      color: var(--green);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 30px;
+      line-height: 1;
+      text-align: center;
+    }
+
+    .date-stamp small {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+    }
+
+    .statement {
+      max-width: 760px;
+      margin: 30px 0 0;
+      color: #3f4744;
+      font-size: 18px;
+      line-height: 1.72;
+    }
+
+    .role-fit {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 1px;
+      margin-top: 32px;
+      border: 1px solid var(--line);
+      background: var(--line);
+    }
+
+    .role-fit span {
+      min-height: 82px;
+      padding: 14px 12px;
+      background: var(--paper);
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.42;
+    }
+
+    .role-fit strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--ink);
+      font-size: 14px;
+    }
+
+    .content {
+      padding: 0 clamp(26px, 5vw, 62px) 44px;
+    }
+
+    .section {
+      padding: 34px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section:last-child {
+      border-bottom: 0;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 112px minmax(0, 1fr);
+      gap: 22px;
+      margin-bottom: 22px;
+      align-items: start;
+    }
+
+    .section-no {
+      color: var(--wine);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 22px;
+      line-height: 1;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", "Songti SC", "SimSun", serif;
+      font-size: clamp(26px, 3vw, 36px);
+      font-weight: 500;
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .section-title p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .entry-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .entry {
+      display: grid;
+      grid-template-columns: minmax(116px, 0.26fr) minmax(0, 1fr);
+      gap: 20px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      min-width: 0;
+    }
+
+    .entry:first-child {
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .entry-meta {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .entry-body {
+      min-width: 0;
+    }
+
+    .entry-body h3 {
+      margin: 0 0 6px;
+      color: var(--ink);
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    .entry-subtitle {
+      margin: 0 0 8px;
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .entry-body ul,
+    .award-group ul,
+    .project-card ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .entry-body li,
+    .award-group li,
+    .project-card li {
+      color: #3f4744;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .entry-body li + li,
+    .award-group li + li,
+    .project-card li + li {
+      margin-top: 4px;
+    }
+
+    .award-layout {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .award-group {
+      min-width: 0;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+    }
+
+    .award-group h3 {
+      margin: 0 0 12px;
+      color: var(--green);
+      font-size: 16px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .project-card {
+      min-width: 0;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+    }
+
+    .project-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .project-card h3 {
+      margin: 0;
+      color: var(--ink);
+      font-size: 18px;
+      line-height: 1.32;
+    }
+
+    .project-type {
+      flex: 0 0 auto;
+      max-width: 48%;
+      padding: 4px 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--blue);
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1.25;
+      text-align: center;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .tags span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .project-links a {
+      color: var(--green);
+    }
+
+    .footnote {
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 980px) {
+      .cv {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .side-sections {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .side-block {
+        border-right: 1px solid var(--line);
+      }
+
+      .side-block:nth-child(2n) {
+        border-right: 0;
+      }
+
+      .role-fit {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      .site-nav-inner,
+      .page {
+        width: 100%;
+      }
+
+      .site-nav-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 12px 14px;
+      }
+
+      .variant-links {
+        justify-content: flex-start;
+      }
+
+      .page {
+        margin: 0;
+        border-right: 0;
+        border-left: 0;
+        box-shadow: none;
+      }
+
+      .identity,
+      .side-block,
+      .hero,
+      .content {
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+
+      .side-sections,
+      .hero-top,
+      .section-head,
+      .entry,
+      .award-layout,
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .side-block,
+      .side-block:nth-child(2n) {
+        border-right: 0;
+      }
+
+      .hero-top {
+        display: grid;
+      }
+
+      .date-stamp {
+        width: 104px;
+        min-height: 104px;
+        font-size: 24px;
+      }
+
+      .role-fit {
+        grid-template-columns: 1fr;
+      }
+
+      .project-top {
+        display: grid;
+      }
+
+      .project-type {
+        max-width: none;
+        width: fit-content;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .site-nav {
+        display: none;
+      }
+
+      .page {
+        width: 100%;
+        margin: 0;
+        border: 0;
+        box-shadow: none;
+      }
+
+      .cv {
+        grid-template-columns: 300px minmax(0, 1fr);
+      }
+
+      .sidebar {
+        border-right: 1px solid var(--line);
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav" aria-label="页面导航">
+    <div class="site-nav-inner">
+      <a class="back-link" href="../index.html">返回主页</a>
+      <div class="variant-links" aria-label="其他变体导航占位">
+        <a href="01-self-branding.html">Variant 01</a>
+        <a href="02-2021-identity.html">Variant 02</a>
+        <a href="03-2021-portfolio.html">Variant 03</a>
+        <a href="04-graphic-designer.html">Variant 04</a>
+        <a href="05-naia-cv.html" aria-current="page">Variant 05</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page">
+    <div class="cv">
+      <aside class="sidebar" aria-label="简历侧栏">
+        <header class="identity">
+          <p class="kicker">Curriculum Vitae</p>
+          <h1><span id="person-name">纪文龙</span><span class="roman" id="person-roman">JavonLoong</span></h1>
+          <p id="person-title">清华大学行健书院本科生</p>
+        </header>
+
+        <div class="side-sections">
+          <section class="side-block" aria-labelledby="profile-heading">
+            <h2 id="profile-heading">Profile</h2>
+            <ul class="facts" id="profile-facts"></ul>
+          </section>
+
+          <section class="side-block" aria-labelledby="links-heading">
+            <h2 id="links-heading">Links</h2>
+            <ul class="links" id="profile-links"></ul>
+          </section>
+
+          <section class="side-block" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Core Skills</h2>
+            <ul class="skills" id="skills-list"></ul>
+          </section>
+
+          <section class="side-block" aria-labelledby="metrics-heading">
+            <h2 id="metrics-heading">Highlights</h2>
+            <ul class="metrics">
+              <li><span class="metric-number">6098</span><span class="metric-label">页动力装备资料处理</span></li>
+              <li><span class="metric-number">593</span><span class="metric-label">条 RAG chunk 沉淀</span></li>
+              <li><span class="metric-number">42</span><span class="metric-label">case 仿真闭环</span></li>
+              <li><span class="metric-number">204h</span><span class="metric-label">志愿公益服务</span></li>
+            </ul>
+          </section>
+        </div>
+      </aside>
+
+      <article class="main">
+        <header class="hero">
+          <div class="hero-top">
+            <div class="doc-title">
+              <span>Formal online resume / variant 05</span>
+              <h2>Readable CV for AI, engineering and public practice.</h2>
+            </div>
+            <div class="date-stamp" aria-label="2026 CV version">2026<small>CV edition</small></div>
+          </div>
+          <p class="statement" id="statement"></p>
+          <div class="role-fit" aria-label="投递方向">
+            <span><strong>AI 工程</strong>RAG、Prompt / SOP、工具调用与控制台原型</span>
+            <span><strong>工程计算</strong>仿真复刻、参数对比、结果验证与材料组织</span>
+            <span><strong>产品原型</strong>学习系统、业务流程、交互逻辑与演示交付</span>
+            <span><strong>内容表达</strong>PPT、网页、图像与技术叙事</span>
+            <span><strong>团队协作</strong>资料调研、文案整合、路演辅助与人员协调</span>
+          </div>
+        </header>
+
+        <div class="content">
+          <section class="section" id="education" aria-labelledby="education-title">
+            <div class="section-head">
+              <div class="section-no">01</div>
+              <div class="section-title">
+                <h2 id="education-title">教育背景</h2>
+                <p>正式 CV 的第一屏信息：学校、专业方向、培养周期与学术基础。</p>
+              </div>
+            </div>
+            <div class="entry-list" id="education-list"></div>
+          </section>
+
+          <section class="section" id="awards" aria-labelledby="awards-title">
+            <div class="section-head">
+              <div class="section-no">02</div>
+              <div class="section-title">
+                <h2 id="awards-title">荣誉奖项与学科竞赛</h2>
+                <p>整合三份 DOCX 与数据源，按正式投递场景分组呈现，减少视觉噪声。</p>
+              </div>
+            </div>
+            <div class="award-layout" id="award-layout"></div>
+          </section>
+
+          <section class="section" id="experience" aria-labelledby="experience-title">
+            <div class="section-head">
+              <div class="section-no">03</div>
+              <div class="section-title">
+                <h2 id="experience-title">经历与公共实践</h2>
+                <p>覆盖社会工作、海外实践、志愿公益和教学表达，强调职责、结果与协作能力。</p>
+              </div>
+            </div>
+            <div class="entry-list" id="experience-list"></div>
+          </section>
+
+          <section class="section" id="projects" aria-labelledby="projects-title">
+            <div class="section-head">
+              <div class="section-no">04</div>
+              <div class="section-title">
+                <h2 id="projects-title">AI / 工程项目</h2>
+                <p>以可验证的项目事实为主体，保留技术栈、规模、过程和公开链接。</p>
+              </div>
+            </div>
+            <div class="project-grid" id="project-grid"></div>
+          </section>
+
+          <p class="footnote">
+            本页为纯静态 HTML，内容由 <code>../assets/resume-data.js</code> 的 <code>window.resumeData</code> 驱动，并补充三份 DOCX 简历中的奖项、社会工作、海外实践、志愿服务与教学表达信息。页面未使用外部 CDN 或外部图片。
+          </p>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <script src="../assets/resume-data.js"></script>
+  <script>
+    (function () {
+      "use strict";
+
+      document.documentElement.dataset.resumeSource =
+        window.resumeData && window.resumeData.person ? "shared-resume-data" : "static-fallback";
+      const data = window.resumeData || {};
+      const person = data.person || {};
+
+      const docxSupplement = {
+        education: [
+          {
+            period: "2024.09 - 2028.07",
+            title: "清华大学 · 行健书院 · 本科",
+            subtitle: "烽火 4 · 理论与应用力学 + 能源与动力工程双学位",
+            points: [
+              "关注 AI 应用工程、工程仿真复刻、知识库 / RAG、产品原型与视觉表达。",
+              "具备信息检索、逻辑分析、快速学习、资料整理与面向展示交付的综合能力。"
+            ]
+          }
+        ],
+        extraAwards: [
+          "2021-2022 学年鹤壁市高中校级特优生",
+          "2022 年鹤壁市“三好学生”"
+        ],
+        roleFit: "资料调研 / 方案逻辑梳理 / 文案整合 / 路演辅助 / 人员协调",
+        experienceEnhancements: {
+          volunteer: [
+            "2025 年高考招生志愿服务 35 小时，协助政策宣讲与咨询。",
+            "暑期校园日常讲解服务 34 小时，向访客传播清华历史与文化。",
+            "第 23 届“情系母校”回访母校活动 26 小时，搭建高校与中学沟通桥梁。"
+          ],
+          teaching: [
+            "参与组织地市拔尖提优辅导班，担任讲师和全科助教。",
+            "可支持方案文字梳理、PPT 逻辑搭建、三分钟宣讲稿与答辩表达优化。"
+          ]
+        }
+      };
+
+      const $ = (selector) => document.querySelector(selector);
+      const escapeHTML = (value) => String(value || "").replace(/[&<>"']/g, (char) => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        "\"": "&quot;",
+        "'": "&#39;"
+      }[char]));
+
+      const listItems = (items) => (items || []).map((item) => `<li>${escapeHTML(item)}</li>`).join("");
+
+      function unique(items) {
+        return Array.from(new Set((items || []).filter(Boolean)));
+      }
+
+      function setText(selector, value) {
+        const node = $(selector);
+        if (node) node.textContent = value || "";
+      }
+
+      function renderProfile() {
+        document.title = `Variant 05 | ${person.name || "Formal CV"}`;
+        setText("#person-name", person.name || "纪文龙");
+        setText("#person-roman", person.roman || "JavonLoong");
+        setText("#person-title", person.title || "清华大学行健书院本科生");
+        setText("#statement", person.statement || "把 AI 从工具用法，变成可运行、可验证、可交付的工作系统。");
+
+        const facts = [
+          ["Education", person.title || "清华大学行健书院本科生"],
+          ["Program", person.program || "理论与应用力学 + 能源与动力工程双学位"],
+          ["Period", person.period || "2024.09 - 2028.07"],
+          ["Positioning", person.positioning || "AI 应用工程 / 工程仿真复刻"],
+          ["Role Fit", docxSupplement.roleFit]
+        ];
+
+        $("#profile-facts").innerHTML = facts.map(([label, value]) => `
+          <li>
+            <span class="label">${escapeHTML(label)}</span>
+            <span class="value">${escapeHTML(value)}</span>
+          </li>
+        `).join("");
+      }
+
+      function renderLinks() {
+        const links = data.links || [];
+        $("#profile-links").innerHTML = links.map((link) => `
+          <li><a href="${escapeHTML(link.url)}">${escapeHTML(link.label)}</a></li>
+        `).join("");
+      }
+
+      function renderSkills() {
+        const abilities = data.abilities || [];
+        $("#skills-list").innerHTML = abilities.map((ability) => `
+          <li class="skill-item">
+            <strong>${escapeHTML(ability.title)}</strong>
+            <span>${escapeHTML(ability.text)}</span>
+          </li>
+        `).join("");
+      }
+
+      function renderEducation() {
+        $("#education-list").innerHTML = docxSupplement.education.map((entry) => `
+          <article class="entry">
+            <div class="entry-meta">${escapeHTML(entry.period)}</div>
+            <div class="entry-body">
+              <h3>${escapeHTML(entry.title)}</h3>
+              <p class="entry-subtitle">${escapeHTML(entry.subtitle)}</p>
+              <ul>${listItems(entry.points)}</ul>
+            </div>
+          </article>
+        `).join("");
+      }
+
+      function awardGroups() {
+        const allAwards = unique([...(data.awards || []), ...docxSupplement.extraAwards]);
+        const scholarship = [];
+        const competition = [];
+        const campus = [];
+
+        allAwards.forEach((item) => {
+          if (/竞赛|赛区|理论力学|中学生数学|物理|生物|化学/.test(item)) {
+            competition.push(item);
+          } else if (/奖学金|强基|励志|海昌|读书郎/.test(item)) {
+            scholarship.push(item);
+          } else {
+            campus.push(item);
+          }
+        });
+
+        return [
+          ["奖学金与选拔荣誉", scholarship],
+          ["学科竞赛", competition],
+          ["校园荣誉与公益", campus]
+        ].filter((group) => group[1].length);
+      }
+
+      function renderAwards() {
+        $("#award-layout").innerHTML = awardGroups().map(([title, items]) => `
+          <section class="award-group">
+            <h3>${escapeHTML(title)}</h3>
+            <ul>${listItems(items)}</ul>
+          </section>
+        `).join("");
+      }
+
+      function normalizeExperience() {
+        const leadership = (data.leadership || []).map((item) => ({
+          period: item.period,
+          title: item.role,
+          subtitle: "社会工作与领导经历",
+          points: item.points
+        }));
+
+        const practice = (data.practice || []).map((item) => {
+          let points = item.points || [];
+          if (/志愿公益/.test(item.name)) {
+            points = unique([...points, ...docxSupplement.experienceEnhancements.volunteer]);
+          }
+          if (/教学|辅导/.test(item.name)) {
+            points = unique([...points, ...docxSupplement.experienceEnhancements.teaching]);
+          }
+          return {
+            period: item.period,
+            title: item.name,
+            subtitle: item.role,
+            points
+          };
+        });
+
+        return [...leadership, ...practice];
+      }
+
+      function renderExperience() {
+        $("#experience-list").innerHTML = normalizeExperience().map((entry) => `
+          <article class="entry">
+            <div class="entry-meta">${escapeHTML(entry.period)}</div>
+            <div class="entry-body">
+              <h3>${escapeHTML(entry.title)}</h3>
+              <p class="entry-subtitle">${escapeHTML(entry.subtitle)}</p>
+              <ul>${listItems(entry.points)}</ul>
+            </div>
+          </article>
+        `).join("");
+      }
+
+      function renderProjects() {
+        const projects = data.aiProjects || [];
+        $("#project-grid").innerHTML = projects.map((project) => `
+          <article class="project-card">
+            <div class="project-top">
+              <h3>${escapeHTML(project.name)}</h3>
+              <span class="project-type">${escapeHTML(project.type)}</span>
+            </div>
+            <ul>${listItems(project.points)}</ul>
+            <div class="tags">${(project.tags || []).map((tag) => `<span>${escapeHTML(tag)}</span>`).join("")}</div>
+            ${(project.links || []).length ? `<div class="project-links">${project.links.map((link) => `<a href="${escapeHTML(link.url)}">${escapeHTML(link.label)}</a>`).join("")}</div>` : ""}
+          </article>
+        `).join("");
+      }
+
+      renderProfile();
+      renderLinks();
+      renderSkills();
+      renderEducation();
+      renderAwards();
+      renderExperience();
+      renderProjects();
+    }());
+  </script>
+</body>
+</html>

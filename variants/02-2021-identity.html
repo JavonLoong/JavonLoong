@@ -1,0 +1,987 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Variant 02 | 2021 Identity Portfolio</title>
+  <meta name="description" content="纪文龙的 2021 portfolio / personal branding 风格个人主页简历，聚焦 AI 项目、工程能力、教育背景、奖项与实践。">
+  <style>
+    :root {
+      --paper: #f8f8f5;
+      --surface: #ffffff;
+      --ink: #18201d;
+      --soft-ink: #4f5a55;
+      --muted: #7b8580;
+      --line: #d9ddd7;
+      --line-strong: #aeb8b1;
+      --accent: #1f6f64;
+      --accent-blue: #2e5e8f;
+      --accent-gold: #b9852d;
+      --accent-soft: #e4efec;
+      --blue-soft: #e7eef6;
+      --gold-soft: #f4ead8;
+      --shadow: 0 18px 48px rgba(24, 32, 29, 0.08);
+      --radius: 8px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-width: 0;
+      overflow-x: hidden;
+      background:
+        linear-gradient(90deg, rgba(24, 32, 29, 0.045) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(24, 32, 29, 0.045) 1px, transparent 1px),
+        var(--paper);
+      background-size: 44px 44px;
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--accent);
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .page {
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+      padding: 18px 0 64px;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 12px 0 16px;
+      background: linear-gradient(180deg, rgba(248, 248, 245, 0.96) 76%, rgba(248, 248, 245, 0));
+      backdrop-filter: blur(12px);
+    }
+
+    .wordmark {
+      display: grid;
+      grid-template-columns: 42px minmax(0, auto);
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .mark {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--ink);
+      background:
+        linear-gradient(135deg, transparent 0 45%, rgba(31, 111, 100, 0.18) 45% 55%, transparent 55%),
+        var(--surface);
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .wordmark strong,
+    .wordmark span {
+      display: block;
+      overflow-wrap: anywhere;
+    }
+
+    .wordmark strong {
+      font-size: 16px;
+      line-height: 1.1;
+    }
+
+    .wordmark span {
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 6px;
+      min-width: 0;
+    }
+
+    .nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 10px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.78);
+      color: var(--soft-ink);
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .nav a[aria-current="page"] {
+      border-color: var(--ink);
+      color: var(--ink);
+      background: var(--surface);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+      gap: 28px;
+      align-items: stretch;
+      padding: 56px 0 38px;
+    }
+
+    .hero-copy {
+      display: grid;
+      align-content: space-between;
+      gap: 44px;
+      min-width: 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 22px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      display: inline-block;
+      width: 34px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin-bottom: 22px;
+      font-size: 72px;
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .name-cn {
+      display: block;
+      margin-top: 12px;
+      color: var(--accent);
+      font-size: 42px;
+      line-height: 1.05;
+    }
+
+    .statement {
+      max-width: 760px;
+      margin-bottom: 0;
+      color: var(--soft-ink);
+      font-size: 19px;
+    }
+
+    .link-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .link-strip a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 40px;
+      padding: 0 13px;
+      border: 1px solid var(--line-strong);
+      background: rgba(255, 255, 255, 0.78);
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 750;
+    }
+
+    .link-strip a::after {
+      content: "↗";
+      color: var(--accent);
+      font-size: 13px;
+    }
+
+    .identity-board {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      min-width: 0;
+      border: 1px solid var(--line-strong);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .board-head {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      padding: 18px;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .board-core {
+      display: grid;
+      gap: 20px;
+      align-content: center;
+      padding: 34px 30px;
+    }
+
+    .monogram {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-auto-rows: 54px;
+      gap: 8px;
+      width: min(100%, 340px);
+    }
+
+    .tile {
+      border: 1px solid var(--ink);
+      background: var(--paper);
+    }
+
+    .tile.dark {
+      background: var(--ink);
+    }
+
+    .tile.green {
+      background: var(--accent);
+    }
+
+    .tile.blue {
+      background: var(--accent-blue);
+    }
+
+    .tile.gold {
+      background: var(--accent-gold);
+    }
+
+    .board-title {
+      margin: 0;
+      font-size: 30px;
+      line-height: 1.16;
+    }
+
+    .board-text {
+      margin: 0;
+      color: var(--soft-ink);
+    }
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      border-top: 1px solid var(--line);
+    }
+
+    .profile-item {
+      min-width: 0;
+      padding: 16px 18px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .profile-item:nth-child(2n) {
+      border-right: 0;
+    }
+
+    .profile-item:nth-last-child(-n + 2) {
+      border-bottom: 0;
+    }
+
+    .profile-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .profile-item strong {
+      display: block;
+      margin-top: 5px;
+      font-size: 15px;
+      line-height: 1.35;
+      overflow-wrap: anywhere;
+    }
+
+    .section {
+      padding: 54px 0 0;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.58fr) minmax(280px, 0.42fr);
+      gap: 28px;
+      align-items: end;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--line-strong);
+    }
+
+    .section-kicker {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .section h2 {
+      margin-bottom: 0;
+      font-size: 34px;
+      line-height: 1.12;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--soft-ink);
+      font-size: 15px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .project-card {
+      display: grid;
+      gap: 16px;
+      min-width: 0;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: 0 10px 30px rgba(24, 32, 29, 0.06);
+    }
+
+    .project-card.featured {
+      grid-column: span 1;
+      border-color: var(--line-strong);
+    }
+
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .project-index {
+      display: inline-grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      border: 1px solid var(--line-strong);
+      color: var(--accent);
+      font-size: 12px;
+    }
+
+    .project-card h3 {
+      margin-bottom: 0;
+      font-size: 22px;
+      line-height: 1.25;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .tag-row span {
+      padding: 4px 8px;
+      border: 1px solid var(--line);
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .project-card:nth-child(2n) .tag-row span {
+      background: var(--blue-soft);
+      color: var(--accent-blue);
+    }
+
+    .project-card:nth-child(3n) .tag-row span {
+      background: var(--gold-soft);
+      color: #815d1f;
+    }
+
+    .clean-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .clean-list li {
+      position: relative;
+      padding-left: 18px;
+      color: var(--soft-ink);
+      overflow-wrap: anywhere;
+    }
+
+    .clean-list li::before {
+      content: "";
+      position: absolute;
+      top: 0.72em;
+      left: 0;
+      width: 7px;
+      height: 7px;
+      background: var(--accent);
+    }
+
+    .card-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 2px;
+    }
+
+    .card-links a {
+      color: var(--accent-blue);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .ability-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .ability-card {
+      min-width: 0;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+
+    .ability-card h3 {
+      margin-bottom: 10px;
+      color: var(--accent);
+      font-size: 18px;
+    }
+
+    .ability-card p {
+      margin-bottom: 0;
+      color: var(--soft-ink);
+      font-size: 14px;
+    }
+
+    .resume-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+      gap: 16px;
+      align-items: start;
+    }
+
+    .resume-panel {
+      min-width: 0;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+
+    .resume-panel h3 {
+      margin-bottom: 14px;
+      font-size: 22px;
+    }
+
+    .education-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .education-list li {
+      padding: 14px;
+      border-left: 3px solid var(--accent);
+      background: var(--accent-soft);
+      color: var(--soft-ink);
+    }
+
+    .education-list strong {
+      display: block;
+      color: var(--ink);
+      font-size: 17px;
+    }
+
+    .award-list {
+      column-count: 2;
+      column-gap: 22px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .award-list li {
+      break-inside: avoid;
+      margin: 0 0 10px;
+      padding: 10px 0 10px 16px;
+      border-bottom: 1px solid var(--line);
+      color: var(--soft-ink);
+      position: relative;
+    }
+
+    .award-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 20px;
+      width: 6px;
+      height: 6px;
+      background: var(--accent-gold);
+    }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .experience-card {
+      min-width: 0;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+
+    .experience-card h3 {
+      margin-bottom: 6px;
+      font-size: 20px;
+      line-height: 1.3;
+    }
+
+    .role-line {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 750;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 60px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line-strong);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    [data-empty="true"] {
+      display: none;
+    }
+
+    @media (max-width: 980px) {
+      h1 {
+        font-size: 56px;
+      }
+
+      .hero,
+      .section-head,
+      .resume-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ability-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: min(100% - 24px, var(--max));
+        padding-bottom: 42px;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+        padding-top: 10px;
+      }
+
+      .nav {
+        justify-content: flex-start;
+      }
+
+      .hero {
+        padding-top: 34px;
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+
+      .name-cn {
+        font-size: 30px;
+      }
+
+      .statement {
+        font-size: 17px;
+      }
+
+      .board-core {
+        padding: 24px 18px;
+      }
+
+      .monogram {
+        grid-auto-rows: 44px;
+      }
+
+      .profile-grid,
+      .project-grid,
+      .ability-grid,
+      .experience-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-item,
+      .profile-item:nth-child(2n),
+      .profile-item:nth-last-child(-n + 2) {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .profile-item:last-child {
+        border-bottom: 0;
+      }
+
+      .section {
+        padding-top: 42px;
+      }
+
+      .section h2 {
+        font-size: 28px;
+      }
+
+      .award-list {
+        column-count: 1;
+      }
+
+      .footer {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .nav a {
+        min-height: 32px;
+        padding: 0 8px;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      .link-strip a {
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar" aria-label="页面导航">
+      <a class="wordmark" href="../index.html" aria-label="返回首页">
+        <span class="mark">02</span>
+        <span>
+          <strong data-field="roman">JavonLoong</strong>
+          <span>2021 Identity Portfolio</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="变体导航">
+        <a href="../index.html">Index</a>
+        <a href="01-self-branding.html">Variant 01</a>
+        <a href="02-2021-identity.html" aria-current="page">Variant 02</a>
+        <a href="03-2021-portfolio.html">Variant 03</a>
+        <a href="04-graphic-designer.html">Variant 04</a>
+        <a href="05-naia-cv.html">Variant 05</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div>
+            <p class="eyebrow">Personal branding / clean identity</p>
+            <h1 id="hero-title">
+              <span data-field="roman">JavonLoong</span>
+              <span class="name-cn" data-field="name">纪文龙</span>
+            </h1>
+            <p class="statement" data-field="statement">把 AI 从工具用法，变成可运行、可验证、可交付的工作系统。</p>
+          </div>
+          <div class="link-strip" id="links" aria-label="个人链接"></div>
+        </div>
+
+        <aside class="identity-board" aria-label="身份信息">
+          <div class="board-head">
+            <span>Portfolio system</span>
+            <span>2021 / 02</span>
+          </div>
+          <div class="board-core">
+            <div class="monogram" aria-hidden="true">
+              <span class="tile dark"></span>
+              <span class="tile"></span>
+              <span class="tile green"></span>
+              <span class="tile"></span>
+              <span class="tile"></span>
+              <span class="tile blue"></span>
+              <span class="tile"></span>
+              <span class="tile dark"></span>
+              <span class="tile gold"></span>
+              <span class="tile"></span>
+              <span class="tile dark"></span>
+              <span class="tile"></span>
+            </div>
+            <div>
+              <h2 class="board-title" data-field="positioning">AI 应用工程 / 工程仿真复刻 / 产品原型</h2>
+              <p class="board-text">用项目、系统和可交付材料说明能力，而不是只罗列技能关键词。</p>
+            </div>
+          </div>
+          <div class="profile-grid">
+            <div class="profile-item">
+              <span>Education</span>
+              <strong data-field="title">清华大学行健书院本科生</strong>
+            </div>
+            <div class="profile-item">
+              <span>Program</span>
+              <strong data-field="program">理论与应用力学 + 能源与动力工程双学位</strong>
+            </div>
+            <div class="profile-item">
+              <span>Period</span>
+              <strong data-field="period">2024.09 - 2028.07</strong>
+            </div>
+            <div class="profile-item">
+              <span>Focus</span>
+              <strong>AI systems / simulation / delivery</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section" aria-labelledby="projects-title">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Selected AI & Engineering Work</p>
+            <h2 id="projects-title">项目像作品集卡片一样展开，强调问题、系统和证据。</h2>
+          </div>
+          <p>优先展示 AI 项目、RAG、工程仿真、产品原型和 3D 参数化等能证明工程能力的内容。</p>
+        </div>
+        <div class="project-grid" id="projects"></div>
+      </section>
+
+      <section class="section" aria-labelledby="abilities-title">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Capability Matrix</p>
+            <h2 id="abilities-title">从 AI 协作到表达交付，形成完整工作闭环。</h2>
+          </div>
+          <p>能力区保持简洁，像 personal brand system 的模块说明，便于快速扫描。</p>
+        </div>
+        <div class="ability-grid" id="abilities"></div>
+      </section>
+
+      <section class="section" aria-labelledby="resume-title">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Education / Awards</p>
+            <h2 id="resume-title">教育背景、奖项和基础能力作为简历骨架。</h2>
+          </div>
+          <p>把学校、专业、阶段和奖项放在清晰的网格里，补足可信度与成长路径。</p>
+        </div>
+        <div class="resume-grid">
+          <div class="resume-panel">
+            <h3>Education</h3>
+            <ul class="education-list" id="education"></ul>
+          </div>
+          <div class="resume-panel">
+            <h3>Awards</h3>
+            <ul class="award-list" id="awards"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="practice-title">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Leadership / Practice</p>
+            <h2 id="practice-title">社会实践与组织经验补充真实协作场景。</h2>
+          </div>
+          <p>保留组织、后勤、公众讲解、教学表达等经历，让页面不只停留在技术项目。</p>
+        </div>
+        <div class="experience-grid" id="experiences"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Variant 02 · 2021 identity direction</span>
+      <span>Static HTML · Data from window.resumeData</span>
+    </footer>
+  </div>
+
+  <script src="../assets/resume-data.js" charset="utf-8"></script>
+  <script>
+    (function () {
+      document.documentElement.dataset.resumeSource =
+        window.resumeData && window.resumeData.person ? "shared-resume-data" : "static-fallback";
+      const data = window.resumeData || {};
+      const person = data.person || {};
+
+      const text = (value, fallback) => value || fallback || "";
+      const make = (tag, className, content) => {
+        const node = document.createElement(tag);
+        if (className) node.className = className;
+        if (content !== undefined) node.textContent = content;
+        return node;
+      };
+      const safeUrl = (url) => {
+        if (!url) return "#";
+        return String(url);
+      };
+      const applyExternalAttrs = (anchor, url) => {
+        if (/^https?:\/\//i.test(url)) {
+          anchor.target = "_blank";
+          anchor.rel = "noreferrer";
+        }
+      };
+
+      document.title = "Variant 02 | " + text(person.name, text(person.roman, "2021 Identity Portfolio"));
+
+      document.querySelectorAll("[data-field]").forEach((node) => {
+        const key = node.getAttribute("data-field");
+        if (person[key]) node.textContent = person[key];
+      });
+
+      const links = document.getElementById("links");
+      (data.links || []).forEach((item) => {
+        const anchor = make("a", "", text(item.label, "Link"));
+        anchor.href = safeUrl(item.url);
+        applyExternalAttrs(anchor, item.url);
+        links.appendChild(anchor);
+      });
+      links.dataset.empty = links.children.length ? "false" : "true";
+
+      const projects = document.getElementById("projects");
+      (data.aiProjects || []).forEach((project, index) => {
+        const card = make("article", "project-card" + (index < 2 ? " featured" : ""));
+        const meta = make("div", "project-meta");
+        meta.appendChild(make("span", "project-index", String(index + 1).padStart(2, "0")));
+        meta.appendChild(make("span", "", text(project.type, "Project")));
+
+        const title = make("h3", "", text(project.name, "Untitled project"));
+        const tags = make("div", "tag-row");
+        (project.tags || []).forEach((tag) => tags.appendChild(make("span", "", tag)));
+
+        const points = make("ul", "clean-list");
+        (project.points || []).forEach((point) => points.appendChild(make("li", "", point)));
+
+        card.append(meta, title);
+        if (tags.children.length) card.appendChild(tags);
+        if (points.children.length) card.appendChild(points);
+
+        if (project.links && project.links.length) {
+          const cardLinks = make("div", "card-links");
+          project.links.forEach((link) => {
+            const anchor = make("a", "", text(link.label, "Link"));
+            anchor.href = safeUrl(link.url);
+            applyExternalAttrs(anchor, link.url);
+            cardLinks.appendChild(anchor);
+          });
+          card.appendChild(cardLinks);
+        }
+
+        projects.appendChild(card);
+      });
+
+      const abilities = document.getElementById("abilities");
+      (data.abilities || []).forEach((ability) => {
+        const card = make("article", "ability-card");
+        card.append(make("h3", "", text(ability.title, "Ability")));
+        card.append(make("p", "", text(ability.text, "")));
+        abilities.appendChild(card);
+      });
+
+      const education = document.getElementById("education");
+      [
+        { label: text(person.title, "教育背景"), detail: text(person.program, "") },
+        { label: "在读阶段", detail: text(person.period, "") },
+        { label: "个人定位", detail: text(person.positioning, "") }
+      ].forEach((item) => {
+        const li = make("li", "");
+        li.append(make("strong", "", item.label));
+        li.append(document.createTextNode(item.detail));
+        education.appendChild(li);
+      });
+
+      const awards = document.getElementById("awards");
+      (data.awards || []).forEach((award) => awards.appendChild(make("li", "", award)));
+
+      const experiences = document.getElementById("experiences");
+      const allExperiences = []
+        .concat(data.leadership || [])
+        .concat(data.practice || []);
+      allExperiences.forEach((item) => {
+        const card = make("article", "experience-card");
+        card.append(make("h3", "", text(item.role || item.name, "Experience")));
+        card.append(make("p", "role-line", [item.name, item.period].filter(Boolean).join(" · ")));
+        const list = make("ul", "clean-list");
+        (item.points || []).forEach((point) => list.appendChild(make("li", "", point)));
+        if (list.children.length) card.appendChild(list);
+        experiences.appendChild(card);
+      });
+    })();
+  </script>
+</body>
+</html>

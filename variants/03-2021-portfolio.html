@@ -1,0 +1,1141 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Variant 03 | 2021 Portfolio Case Studies</title>
+  <meta name="description" content="Variant 03: 2021 portfolio cover and horizontal case-study narrative.">
+  <style>
+    :root {
+      --paper: #f2eadf;
+      --sheet: #fffaf1;
+      --ink: #151515;
+      --muted: #625d55;
+      --line: rgba(21, 21, 21, .28);
+      --red: #c84d3d;
+      --blue: #19385f;
+      --gold: #d8a53b;
+      --mint: #7bb59f;
+      --cloud: #dfe7e3;
+      --max: 1240px;
+      --radius: 6px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      min-width: 0;
+      margin: 0;
+      overflow-x: hidden;
+      background:
+        linear-gradient(90deg, rgba(21, 21, 21, .055) 1px, transparent 1px),
+        linear-gradient(rgba(21, 21, 21, .035) 1px, transparent 1px),
+        var(--paper);
+      background-size: 76px 100%, 100% 34px;
+      color: var(--ink);
+      font-family: Arial, "Microsoft YaHei", "PingFang SC", sans-serif;
+      line-height: 1.55;
+      letter-spacing: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .page {
+      width: min(var(--max), calc(100% - 28px));
+      margin: 0 auto;
+      padding: 14px 0 64px;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: center;
+      padding: 11px 0 15px;
+      background: linear-gradient(180deg, var(--paper) 76%, rgba(242, 234, 223, 0));
+    }
+
+    .home-link {
+      min-width: 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .home-mark {
+      display: inline-grid;
+      flex: 0 0 42px;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border: 2px solid var(--ink);
+      background: var(--gold);
+      box-shadow: 4px 4px 0 var(--ink);
+    }
+
+    .home-copy {
+      min-width: 0;
+      display: grid;
+      gap: 2px;
+    }
+
+    .home-copy span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .home-copy small {
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: .08em;
+    }
+
+    .variant-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 7px;
+    }
+
+    .variant-nav a {
+      display: inline-flex;
+      min-height: 34px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--ink);
+      border-radius: 999px;
+      padding: 0 12px;
+      background: rgba(255, 250, 241, .88);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .variant-nav a[aria-current="page"] {
+      background: var(--ink);
+      color: var(--sheet);
+    }
+
+    main { min-width: 0; }
+
+    .cover {
+      min-height: calc(100svh - 96px);
+      display: grid;
+      grid-template-columns: 92px minmax(0, 1fr) minmax(260px, 360px);
+      gap: 16px;
+      align-items: stretch;
+      padding-top: 14px;
+    }
+
+    .spine,
+    .cover-main,
+    .cover-side,
+    .case-spread,
+    .type-break,
+    .evidence-section {
+      border: 2px solid var(--ink);
+      border-radius: var(--radius);
+      background: var(--sheet);
+      box-shadow: 7px 7px 0 var(--ink);
+    }
+
+    .spine {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 10px;
+      background: var(--blue);
+      color: var(--sheet);
+      overflow: hidden;
+    }
+
+    .spine strong {
+      writing-mode: vertical-rl;
+      font-size: clamp(31px, 5vw, 56px);
+      line-height: .88;
+      text-transform: uppercase;
+    }
+
+    .spine span,
+    .spine small {
+      color: rgba(255, 250, 241, .78);
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .cover-main {
+      position: relative;
+      min-width: 0;
+      display: grid;
+      align-content: space-between;
+      gap: 42px;
+      padding: clamp(24px, 5vw, 54px);
+      overflow: hidden;
+    }
+
+    .cover-main::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(120deg, transparent 0 58%, rgba(200, 77, 61, .16) 58% 72%, transparent 72%),
+        radial-gradient(circle at 88% 18%, rgba(216, 165, 59, .55) 0 54px, transparent 55px),
+        radial-gradient(circle at 84% 18%, transparent 0 84px, rgba(21, 21, 21, .16) 85px 87px, transparent 88px);
+    }
+
+    .kicker {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .kicker::before {
+      content: "";
+      width: 54px;
+      height: 10px;
+      border: 2px solid var(--ink);
+      background: var(--red);
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      max-width: 9ch;
+      margin: 0;
+      font-size: clamp(56px, 14vw, 164px);
+      line-height: .78;
+      text-transform: uppercase;
+      overflow-wrap: anywhere;
+    }
+
+    .cover-subtitle {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(22px, 4vw, 52px);
+      line-height: 1.04;
+      font-weight: 900;
+      overflow-wrap: anywhere;
+    }
+
+    .cover-meta {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      border-top: 2px solid var(--ink);
+      padding-top: 16px;
+    }
+
+    .meta-block small,
+    .case-label,
+    .record-label,
+    .section-tag {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .meta-block strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 15px;
+      line-height: 1.35;
+      overflow-wrap: anywhere;
+    }
+
+    .cover-side {
+      min-width: 0;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      overflow: hidden;
+      background: #fbf4e6;
+    }
+
+    .side-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      border-bottom: 2px solid var(--ink);
+      padding: 15px;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .poster-plate {
+      position: relative;
+      min-height: 330px;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, transparent 0 48%, rgba(21, 21, 21, .14) 48% 52%, transparent 52%),
+        linear-gradient(transparent 0 48%, rgba(21, 21, 21, .14) 48% 52%, transparent 52%),
+        var(--cloud);
+    }
+
+    .poster-plate::before,
+    .poster-plate::after {
+      content: "";
+      position: absolute;
+      border: 2px solid var(--ink);
+    }
+
+    .poster-plate::before {
+      width: 62%;
+      aspect-ratio: 1;
+      left: 12%;
+      top: 15%;
+      background:
+        linear-gradient(135deg, var(--red) 0 34%, transparent 34%),
+        linear-gradient(45deg, transparent 0 58%, var(--gold) 58%),
+        var(--sheet);
+      transform: rotate(-9deg);
+      box-shadow: 10px 10px 0 var(--ink);
+    }
+
+    .poster-plate::after {
+      width: 32%;
+      aspect-ratio: 1;
+      right: 12%;
+      bottom: 13%;
+      border-radius: 50%;
+      background: var(--mint);
+    }
+
+    .side-facts { display: grid; border-top: 2px solid var(--ink); }
+
+    .fact-row {
+      min-width: 0;
+      display: grid;
+      grid-template-columns: 92px minmax(0, 1fr);
+      gap: 10px;
+      border-bottom: 1px solid var(--line);
+      padding: 13px 15px;
+    }
+
+    .fact-row:last-child { border-bottom: 0; }
+
+    .fact-row b {
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+
+    .fact-row span {
+      min-width: 0;
+      color: #34312c;
+      font-size: 14px;
+      font-weight: 780;
+      overflow-wrap: anywhere;
+    }
+
+    .type-break {
+      margin-top: 54px;
+      padding: clamp(24px, 5vw, 48px);
+      background: var(--ink);
+      color: var(--sheet);
+      overflow: hidden;
+    }
+
+    .type-break span {
+      display: block;
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .type-break p {
+      max-width: 13ch;
+      margin: 14px 0 0;
+      font-size: clamp(44px, 10vw, 126px);
+      font-weight: 950;
+      line-height: .86;
+      text-transform: uppercase;
+      overflow-wrap: anywhere;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 20px;
+      align-items: end;
+      margin: 62px 0 18px;
+      border-bottom: 2px solid var(--ink);
+      padding-bottom: 13px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(34px, 7vw, 92px);
+      line-height: .86;
+      text-transform: uppercase;
+      overflow-wrap: anywhere;
+    }
+
+    .section-head p {
+      max-width: 430px;
+      margin: 0;
+      color: #39342e;
+      font-size: 15px;
+      font-weight: 760;
+    }
+
+    .section-tag {
+      width: fit-content;
+      border: 2px solid var(--ink);
+      padding: 7px 10px;
+      background: var(--gold);
+      color: var(--ink);
+      white-space: nowrap;
+    }
+
+    .case-list { display: grid; gap: 18px; }
+
+    .case-spread {
+      --case-accent: var(--red);
+      min-width: 0;
+      display: grid;
+      grid-template-columns: minmax(86px, .18fr) minmax(0, 1fr) minmax(230px, .46fr);
+      gap: 0;
+      overflow: hidden;
+    }
+
+    .case-spread:nth-child(2n) { --case-accent: var(--blue); }
+    .case-spread:nth-child(3n) { --case-accent: var(--mint); }
+
+    .case-number {
+      display: grid;
+      align-content: space-between;
+      border-right: 2px solid var(--ink);
+      padding: 18px 14px;
+      background: var(--case-accent);
+      color: var(--sheet);
+    }
+
+    .case-number span {
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .case-number strong {
+      display: block;
+      font-size: clamp(54px, 9vw, 112px);
+      line-height: .8;
+    }
+
+    .case-number em {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 850;
+      line-height: 1.35;
+      overflow-wrap: anywhere;
+    }
+
+    .case-story {
+      min-width: 0;
+      display: grid;
+      gap: 18px;
+      align-content: space-between;
+      padding: clamp(20px, 4vw, 38px);
+    }
+
+    .case-story h3 {
+      max-width: 16ch;
+      margin: 8px 0 0;
+      font-size: clamp(30px, 6vw, 78px);
+      line-height: .92;
+      overflow-wrap: anywhere;
+    }
+
+    .case-copy {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      border-top: 2px solid var(--ink);
+      padding-top: 16px;
+    }
+
+    .case-copy p {
+      min-width: 0;
+      margin: 0;
+      color: #2f2b26;
+      font-size: 15px;
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .tag-row li {
+      max-width: 100%;
+      border: 1px solid var(--ink);
+      border-radius: 999px;
+      padding: 5px 9px;
+      background: rgba(255, 250, 241, .9);
+      font-size: 12px;
+      font-weight: 850;
+      overflow-wrap: anywhere;
+    }
+
+    .case-proof {
+      min-width: 0;
+      display: grid;
+      grid-template-rows: minmax(170px, 1fr) auto;
+      border-left: 2px solid var(--ink);
+      background: #f8f1e4;
+    }
+
+    .case-visual {
+      position: relative;
+      min-width: 0;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(21, 21, 21, .1) 1px, transparent 1px),
+        linear-gradient(rgba(21, 21, 21, .08) 1px, transparent 1px),
+        var(--cloud);
+      background-size: 34px 34px;
+    }
+
+    .case-visual::before,
+    .case-visual::after {
+      content: "";
+      position: absolute;
+      border: 2px solid var(--ink);
+    }
+
+    .case-visual::before {
+      width: 52%;
+      height: 48%;
+      left: 15%;
+      top: 20%;
+      background: var(--sheet);
+      box-shadow: 8px 8px 0 var(--ink);
+      transform: rotate(calc((var(--i) - 3) * 2deg));
+    }
+
+    .case-visual::after {
+      width: 34%;
+      aspect-ratio: 1;
+      right: 12%;
+      bottom: 16%;
+      border-radius: 50%;
+      background: var(--case-accent);
+    }
+
+    .case-spread:nth-child(2n) .case-visual::after { border-radius: 0; }
+
+    .case-proof-inner {
+      min-width: 0;
+      display: grid;
+      gap: 12px;
+      border-top: 2px solid var(--ink);
+      padding: 16px;
+    }
+
+    .proof-line {
+      min-width: 0;
+      display: grid;
+      grid-template-columns: 74px minmax(0, 1fr);
+      gap: 10px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 9px;
+    }
+
+    .proof-line:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .proof-line b {
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+
+    .proof-line span,
+    .proof-line a {
+      min-width: 0;
+      font-size: 13px;
+      font-weight: 800;
+      overflow-wrap: anywhere;
+    }
+
+    .proof-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .proof-links a {
+      border: 1px solid var(--ink);
+      border-radius: 999px;
+      padding: 4px 8px;
+      background: var(--sheet);
+    }
+
+    .evidence-grid {
+      display: grid;
+      grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+      gap: 18px;
+    }
+
+    .evidence-section {
+      min-width: 0;
+      padding: clamp(20px, 4vw, 34px);
+      overflow: hidden;
+    }
+
+    .evidence-section h3 {
+      margin: 0 0 18px;
+      font-size: clamp(24px, 4vw, 42px);
+      line-height: .95;
+      text-transform: uppercase;
+    }
+
+    .award-ledger {
+      display: grid;
+      gap: 0;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: award;
+    }
+
+    .award-ledger li {
+      min-width: 0;
+      display: grid;
+      grid-template-columns: 48px minmax(0, 1fr);
+      gap: 12px;
+      border-top: 1px solid var(--line);
+      padding: 11px 0;
+      color: #302c27;
+      font-size: 14px;
+      font-weight: 760;
+      overflow-wrap: anywhere;
+      counter-increment: award;
+    }
+
+    .award-ledger li::before {
+      content: counter(award, decimal-leading-zero);
+      color: var(--red);
+      font-weight: 950;
+    }
+
+    .record-list { display: grid; gap: 16px; }
+
+    .record {
+      min-width: 0;
+      display: grid;
+      grid-template-columns: 78px minmax(0, 1fr);
+      border: 2px solid var(--ink);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .record-no {
+      display: grid;
+      place-items: center;
+      border-right: 2px solid var(--ink);
+      background: var(--blue);
+      color: var(--sheet);
+      font-size: 25px;
+      font-weight: 950;
+    }
+
+    .record-body {
+      min-width: 0;
+      padding: 16px;
+    }
+
+    .record-body h4 {
+      margin: 5px 0 4px;
+      font-size: 20px;
+      line-height: 1.12;
+      overflow-wrap: anywhere;
+    }
+
+    .record-period {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 820;
+    }
+
+    .record-body ul {
+      display: grid;
+      gap: 7px;
+      margin: 12px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .record-body li {
+      position: relative;
+      min-width: 0;
+      padding-left: 18px;
+      color: #37332e;
+      font-size: 14px;
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
+
+    .record-body li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .62em;
+      width: 8px;
+      height: 8px;
+      border: 1px solid var(--ink);
+      background: var(--gold);
+    }
+
+    .practice-band {
+      margin-top: 18px;
+    }
+
+    .practice-band .record-no {
+      background: var(--red);
+    }
+
+    .footer {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: center;
+      margin-top: 54px;
+      border-top: 2px solid var(--ink);
+      padding-top: 16px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .footer-links a {
+      border: 1px solid var(--ink);
+      border-radius: 999px;
+      padding: 7px 10px;
+      background: var(--sheet);
+      color: var(--ink);
+    }
+
+    @media (max-width: 980px) {
+      .cover {
+        grid-template-columns: minmax(0, 1fr);
+        min-height: auto;
+      }
+
+      .spine {
+        min-height: 82px;
+        flex-direction: row;
+      }
+
+      .spine strong {
+        writing-mode: initial;
+        font-size: clamp(32px, 9vw, 58px);
+      }
+
+      .cover-side {
+        grid-template-rows: auto minmax(260px, 1fr) auto;
+      }
+
+      .case-spread {
+        grid-template-columns: minmax(78px, .2fr) minmax(0, 1fr);
+      }
+
+      .case-proof {
+        grid-column: 1 / -1;
+        grid-template-columns: minmax(180px, .45fr) minmax(0, 1fr);
+        grid-template-rows: auto;
+        border-top: 2px solid var(--ink);
+        border-left: 0;
+      }
+
+      .case-proof-inner {
+        border-top: 0;
+        border-left: 2px solid var(--ink);
+      }
+
+      .evidence-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .page {
+        width: min(100% - 20px, var(--max));
+        padding-top: 8px;
+      }
+
+      .topbar,
+      .section-head,
+      .footer {
+        position: static;
+        grid-template-columns: 1fr;
+      }
+
+      .variant-nav,
+      .footer-links {
+        justify-content: flex-start;
+      }
+
+      .cover-main,
+      .type-break,
+      .evidence-section {
+        padding: 20px;
+      }
+
+      .cover-meta,
+      .case-copy {
+        grid-template-columns: 1fr;
+      }
+
+      .case-spread,
+      .case-proof,
+      .record {
+        grid-template-columns: 1fr;
+      }
+
+      .case-number {
+        min-height: 118px;
+        grid-template-columns: auto 1fr auto;
+        align-items: end;
+        border-right: 0;
+        border-bottom: 2px solid var(--ink);
+      }
+
+      .case-number strong {
+        justify-self: center;
+      }
+
+      .case-proof-inner {
+        border-left: 0;
+        border-top: 2px solid var(--ink);
+      }
+
+      .record-no {
+        min-height: 54px;
+        border-right: 0;
+        border-bottom: 2px solid var(--ink);
+      }
+    }
+
+    @media (max-width: 420px) {
+      .variant-nav a {
+        flex: 1 1 54px;
+      }
+
+      .fact-row,
+      .proof-line,
+      .award-ledger li {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar" aria-label="Page navigation">
+      <a class="home-link" href="../index.html" aria-label="返回主页">
+        <span class="home-mark">03</span>
+        <span class="home-copy">
+          <span id="navName">JavonLoong Portfolio</span>
+          <small>Back to index</small>
+        </span>
+      </a>
+      <nav class="variant-nav" aria-label="Variant links">
+        <a href="../index.html">Index</a>
+        <a href="./01-self-branding.html">V01</a>
+        <a href="./02-2021-identity.html">V02</a>
+        <a href="./03-2021-portfolio.html" aria-current="page">V03</a>
+        <a href="./04-graphic-designer.html">V04</a>
+        <a href="./05-naia-cv.html">V05</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="cover" aria-labelledby="coverTitle">
+        <aside class="spine" aria-label="Portfolio spine">
+          <span>2021</span>
+          <strong>Portfolio</strong>
+          <small>No.03</small>
+        </aside>
+
+        <div class="cover-main">
+          <p class="kicker">Variant 03 / Numbered Portfolio / Case Studies</p>
+          <div>
+            <h1 id="coverTitle">2021 Portfolio</h1>
+            <p class="cover-subtitle" id="coverSubtitle">AI application engineering shown as case-study spreads.</p>
+          </div>
+          <div class="cover-meta" aria-label="Portfolio metadata">
+            <div class="meta-block">
+              <small>Author</small>
+              <strong id="personName">JavonLoong</strong>
+            </div>
+            <div class="meta-block">
+              <small>Program</small>
+              <strong id="personProgram">Loading portfolio data</strong>
+            </div>
+            <div class="meta-block">
+              <small>Positioning</small>
+              <strong id="personPosition">AI / Engineering / Visual Systems</strong>
+            </div>
+          </div>
+        </div>
+
+        <aside class="cover-side" aria-label="Portfolio cover facts">
+          <div class="side-head">
+            <span>Cover System</span>
+            <span>03/05</span>
+          </div>
+          <div class="poster-plate" aria-hidden="true"></div>
+          <div class="side-facts" id="sideFacts"></div>
+        </aside>
+      </section>
+
+      <section class="type-break" aria-label="Portfolio statement">
+        <span>Selected work becomes a sequence</span>
+        <p>06 Cases, One Practice</p>
+      </section>
+
+      <section id="cases" aria-labelledby="caseTitle">
+        <div class="section-head">
+          <div>
+            <span class="section-tag">Portfolio Index</span>
+            <h2 id="caseTitle">Case Studies</h2>
+          </div>
+          <p>六个 AI/工程项目被整理成编号作品页：每一页保留项目类型、技术标签、关键叙事和可访问链接，形成从知识系统到视觉交付的横向叙事。</p>
+        </div>
+        <div class="case-list" id="caseList"></div>
+      </section>
+
+      <section id="evidence" aria-labelledby="evidenceTitle">
+        <div class="section-head">
+          <div>
+            <span class="section-tag">Back Matter</span>
+            <h2 id="evidenceTitle">Evidence Archive</h2>
+          </div>
+          <p>页面后半部分把奖项、社会工作与实践经历收束为作品集附录，作为 case study 之外的可信度材料。</p>
+        </div>
+
+        <div class="evidence-grid">
+          <section class="evidence-section" aria-labelledby="awardsTitle">
+            <h3 id="awardsTitle">Awards Ledger</h3>
+            <ol class="award-ledger" id="awardList"></ol>
+          </section>
+
+          <section class="evidence-section" aria-labelledby="rolesTitle">
+            <h3 id="rolesTitle">Social Work</h3>
+            <div class="record-list" id="leadershipList"></div>
+          </section>
+        </div>
+
+        <section class="evidence-section practice-band" aria-labelledby="practiceTitle">
+          <h3 id="practiceTitle">Practice Notes</h3>
+          <div class="record-list" id="practiceList"></div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span id="footerLine">Variant 03 / 2021 Portfolio Case Studies</span>
+      <div class="footer-links">
+        <a href="../index.html">Back to Index</a>
+        <a href="#cases">Cases</a>
+        <a href="#evidence">Evidence</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/resume-data.js"></script>
+  <script>
+    (() => {
+      document.documentElement.dataset.resumeSource =
+        window.resumeData && window.resumeData.person ? "shared-resume-data" : "static-fallback";
+      const data = window.resumeData || {};
+      const person = data.person || {};
+      const projects = Array.isArray(data.aiProjects) ? data.aiProjects.slice(0, 6) : [];
+      const awards = Array.isArray(data.awards) ? data.awards : [];
+      const leadership = Array.isArray(data.leadership) ? data.leadership : [];
+      const practice = Array.isArray(data.practice) ? data.practice : [];
+
+      const $ = (selector) => document.querySelector(selector);
+      const safe = (value, fallback = "") => value || fallback;
+      const pad = (number) => String(number).padStart(2, "0");
+
+      const setText = (selector, value) => {
+        const node = $(selector);
+        if (node) node.textContent = value;
+      };
+
+      const make = (tag, className, text) => {
+        const node = document.createElement(tag);
+        if (className) node.className = className;
+        if (text !== undefined) node.textContent = text;
+        return node;
+      };
+
+      const appendFacts = () => {
+        const facts = [
+          ["Name", [safe(person.name), safe(person.roman)].filter(Boolean).join(" / ") || "JavonLoong"],
+          ["Period", safe(person.period, "2024.09 - 2028.07")],
+          ["Cases", `${projects.length || 6} selected works`],
+          ["Mode", "Portfolio cover + horizontal case narrative"]
+        ];
+        const wrap = $("#sideFacts");
+        if (!wrap) return;
+        wrap.replaceChildren(...facts.map(([label, value]) => {
+          const row = make("div", "fact-row");
+          row.append(make("b", "", label), make("span", "", value));
+          return row;
+        }));
+      };
+
+      const renderCase = (project, index) => {
+        const article = make("article", "case-spread");
+        article.style.setProperty("--i", index + 1);
+
+        const number = make("div", "case-number");
+        number.append(make("span", "", "Case"), make("strong", "", pad(index + 1)), make("em", "", safe(project.type, "Portfolio case")));
+
+        const story = make("div", "case-story");
+        const top = make("div");
+        top.append(make("span", "case-label", `2021 portfolio / study ${pad(index + 1)}`), make("h3", "", safe(project.name, `Case ${pad(index + 1)}`)));
+
+        const points = Array.isArray(project.points) ? project.points : [];
+        const copy = make("div", "case-copy");
+        copy.append(
+          make("p", "", safe(points[0], "A selected AI and engineering portfolio case.")),
+          make("p", "", safe(points[1], "Evidence, process and delivery are organized into a case-study spread."))
+        );
+
+        const tags = make("ul", "tag-row");
+        (Array.isArray(project.tags) ? project.tags : []).slice(0, 5).forEach((tag) => tags.append(make("li", "", tag)));
+        story.append(top, copy, tags);
+
+        const proof = make("aside", "case-proof");
+        const visual = make("div", "case-visual");
+        visual.setAttribute("aria-hidden", "true");
+        const proofInner = make("div", "case-proof-inner");
+
+        const role = make("div", "proof-line");
+        role.append(make("b", "", "Role"), make("span", "", safe(project.type, "Case study")));
+
+        const firstTags = Array.isArray(project.tags) ? project.tags.slice(0, 3).join(" / ") : "";
+        const signal = make("div", "proof-line");
+        signal.append(make("b", "", "Signal"), make("span", "", safe(firstTags, "AI / engineering / delivery")));
+
+        const links = make("div", "proof-line");
+        links.append(make("b", "", "Links"));
+        const linkWrap = make("span", "proof-links");
+        if (Array.isArray(project.links) && project.links.length) {
+          project.links.forEach((link) => {
+            const a = make("a", "", safe(link.label, "Link"));
+            a.href = safe(link.url, "#");
+            if (safe(link.url).startsWith("http")) {
+              a.target = "_blank";
+              a.rel = "noreferrer";
+            }
+            linkWrap.append(a);
+          });
+        } else {
+          linkWrap.textContent = "Internal evidence / process archive";
+        }
+        links.append(linkWrap);
+
+        proofInner.append(role, signal, links);
+        proof.append(visual, proofInner);
+        article.append(number, story, proof);
+        return article;
+      };
+
+      const renderRecord = (item, index, type) => {
+        const article = make("article", "record");
+        const no = make("div", "record-no", type === "practice" ? `P${index + 1}` : pad(index + 1));
+        const body = make("div", "record-body");
+        body.append(make("span", "record-label", safe(item.role, type === "practice" ? "Practice" : "Role")));
+        body.append(make("h4", "", safe(item.name || item.role, "Record")));
+        body.append(make("span", "record-period", safe(item.period, "Ongoing")));
+
+        const list = make("ul");
+        (Array.isArray(item.points) ? item.points : []).slice(0, 3).forEach((point) => list.append(make("li", "", point)));
+        body.append(list);
+        article.append(no, body);
+        return article;
+      };
+
+      setText("#navName", `${safe(person.roman, "JavonLoong")} Portfolio`);
+      setText("#personName", [safe(person.name), safe(person.roman)].filter(Boolean).join(" / ") || "JavonLoong");
+      setText("#personProgram", safe(person.program, "AI application engineering portfolio"));
+      setText("#personPosition", safe(person.positioning, "AI / Engineering / Visual Systems"));
+      setText("#coverSubtitle", safe(person.statement, "AI application engineering shown as case-study spreads."));
+      setText("#footerLine", `Variant 03 / ${safe(person.roman, "JavonLoong")} / 2021 Portfolio Case Studies`);
+      document.title = `Variant 03 | ${safe(person.roman, "JavonLoong")} 2021 Portfolio`;
+
+      appendFacts();
+      const caseList = $("#caseList");
+      if (caseList) caseList.replaceChildren(...projects.map(renderCase));
+
+      const awardList = $("#awardList");
+      if (awardList) awardList.replaceChildren(...awards.map((award) => make("li", "", award)));
+
+      const leadershipList = $("#leadershipList");
+      if (leadershipList) leadershipList.replaceChildren(...leadership.map((item, index) => renderRecord(item, index, "leadership")));
+
+      const practiceList = $("#practiceList");
+      if (practiceList) practiceList.replaceChildren(...practice.map((item, index) => renderRecord(item, index, "practice")));
+    })();
+  </script>
+</body>
+</html>
