@@ -909,7 +909,7 @@
       }
 
       function renderProjects() {
-        const projects = data.aiProjects || [];
+        const projects = (data.aiProjects || []).filter((project) => !/步步|伴学/.test(project.name || ""));
         $("#project-grid").innerHTML = projects.map((project) => `
           <article class="project-card">
             <div class="project-top">
