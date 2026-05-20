@@ -137,7 +137,6 @@
     }
 
     .facts,
-    .links,
     .skills,
     .metrics {
       display: grid;
@@ -167,27 +166,6 @@
     .value {
       color: var(--ink);
       font-size: 14px;
-      font-weight: 700;
-    }
-
-    .links a {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-      min-height: 38px;
-      padding: 0 12px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: var(--paper);
-      color: var(--ink);
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    .links a::after {
-      content: "↗";
-      color: var(--gold);
       font-weight: 700;
     }
 
@@ -672,11 +650,6 @@
             <ul class="facts" id="profile-facts"></ul>
           </section>
 
-          <section class="side-block" aria-labelledby="links-heading">
-            <h2 id="links-heading">Links</h2>
-            <ul class="links" id="profile-links"></ul>
-          </section>
-
           <section class="side-block" aria-labelledby="skills-heading">
             <h2 id="skills-heading">Core Skills</h2>
             <ul class="skills" id="skills-list"></ul>
@@ -840,9 +813,7 @@
           ["Education", person.title || "清华大学行健书院本科生"],
           ["Program", person.program || "理论与应用力学 + 能源与动力工程双学位"],
           ["Coursework", person.coursework || "已修读课程 24 门，其中必修课 17 门"],
-          ["Period", person.period || "2024.09 - 2028.07"],
-          ["Positioning", person.positioning || "AI 应用工程 / 工程仿真复刻"],
-          ["Role Fit", docxSupplement.roleFit]
+          ["Period", person.period || "2024.09 - 2028.07"]
         ];
 
         $("#profile-facts").innerHTML = facts.map(([label, value]) => `
@@ -850,13 +821,6 @@
             <span class="label">${escapeHTML(label)}</span>
             <span class="value">${escapeHTML(value)}</span>
           </li>
-        `).join("");
-      }
-
-      function renderLinks() {
-        const links = data.links || [];
-        $("#profile-links").innerHTML = links.map((link) => `
-          <li><a href="${escapeHTML(normalizeUrl(link.url))}">${escapeHTML(link.label)}</a></li>
         `).join("");
       }
 
@@ -971,7 +935,6 @@
       }
 
       renderProfile();
-      renderLinks();
       renderSkills();
       renderEducation();
       renderAwards();
