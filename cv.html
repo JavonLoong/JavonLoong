@@ -310,7 +310,7 @@
 
     .role-fit {
       display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 1px;
       margin-top: 32px;
       border: 1px solid var(--line);
@@ -569,7 +569,7 @@
       }
 
       .role-fit {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
@@ -669,12 +669,11 @@
             <div class="date-stamp" aria-label="2026 CV version">2026<small>CV edition</small></div>
           </div>
           <p class="statement" id="statement"></p>
-          <div class="role-fit" aria-label="投递方向">
-            <span><strong>AI 协作</strong>Prompt 设计、CoT 任务拆解、MCP / 函数调用、Agent 分工与审核</span>
-            <span><strong>工程实现</strong>Python、FastAPI、ChromaDB、React、Vite、Three.js、LaTeX</span>
-            <span><strong>仿真与数据</strong>COMSOL 气动极线、AWES 复刻、数据清洗、结果验证</span>
-            <span><strong>表达交付</strong>PPT 制作、图像生成重绘、汇报材料整理、公开网页演示</span>
-            <span><strong>调研与转化</strong>资料调研、方案逻辑梳理、文案整合、路演辅助与人员协调</span>
+          <div class="role-fit" aria-label="AI 方法论">
+            <span><strong>工具与 Skill</strong>先看前人成果与开源项目，整合和微调优先，明确缺口后再自建</span>
+            <span><strong>上下文工程</strong>先收敛整体 plan，再多子 agent 实现，由主 agent 审核并修正进度</span>
+            <span><strong>辅助编程</strong>保持人工干预，要求核心逻辑可解释、可审计、可验证</span>
+            <span><strong>上下文治理</strong>阶段性压缩或新开窗口，隔离试错噪声，减少上下文污染</span>
           </div>
         </header>
       </section>
@@ -719,7 +718,7 @@
     </div>
   </main>
 
-  <script src="assets/resume-data.js?v=20260520-awes-showcase"></script>
+  <script src="assets/resume-data.js?v=20260520-ai-methodology"></script>
   <script>
     (function () {
       "use strict";
@@ -772,7 +771,7 @@
         setText("#person-name", person.name || "纪文龙");
         setText("#person-roman", person.roman || "JavonLoong");
         setText("#person-title", person.title || "清华大学行健书院本科生");
-        setText("#statement", person.statement || "把模糊任务做成能交付的结果：先厘清资料、对象和证据，再搭工具、做验证，最后用网页、PPT 或 PDF 把结论讲清楚。");
+        setText("#statement", person.statement || "我把 AI 当成工程协作系统：先确认资料、边界与可复用工具，再用收敛的 plan、子 agent 实现、主 agent 审核和阶段性验证，把任务推进到可解释的交付。");
 
         const facts = [
           ["Education", person.title || "清华大学行健书院本科生"],

@@ -8,31 +8,27 @@ window.resumeData = {
     coursework: "已修读课程 24 门，其中必修课 17 门",
     positioning: "AI 应用工程、工程仿真复刻、产品原型与视觉表达",
     statement:
-      "我更擅长把一个模糊任务做成能交付的结果：先厘清资料、对象和证据，再搭工具、做验证，最后用网页、PPT 或 PDF 把结论讲清楚。"
+      "我把 AI 当成工程协作系统：先确认资料、边界与可复用工具，再用收敛的 plan、子 agent 实现、主 agent 审核和阶段性验证，把任务推进到可解释的交付。"
   },
   links: [
     { label: "GitHub", url: "https://github.com/JavonLoong" }
   ],
   abilities: [
     {
-      title: "AI 协作",
-      text: "Prompt 设计、CoT 任务拆解、Few-shot 风格控制、MCP / 函数调用、Skill / SOP 沉淀、Agent 分工与审核。"
+      title: "工具与 Skill 取舍",
+      text: "先看前人成果和开源项目能否覆盖需求；能整合就整合，能微调就微调，确实有明确缺口时再从零自建工具。"
     },
     {
-      title: "工程实现",
-      text: "Python、FastAPI、ChromaDB、React、Vite、Three.js、HTML/CSS/JavaScript、LaTeX、GitHub Pages。"
+      title: "上下文工程",
+      text: "先建立收敛的整体 plan 和交付边界，再拆给多子 agent 实现；主 agent 负责审核、合并证据，并随时修正 plan 完成度。"
     },
     {
-      title: "仿真与数据",
-      text: "COMSOL 气动极线、AWES 高空风能复刻、数据清洗、向量检索、benchmark、日志与可审计材料组织。"
+      title: "AI 辅助编程",
+      text: "更倾向可干预、可解释的 AI 辅助编程，而不是完全 vibe coding；核心逻辑要能说明来源、假设、验证和失败边界。"
     },
     {
-      title: "表达交付",
-      text: "PPT 制作、图像生成与重绘、汇报材料整理、产品概念书、竞品分析、公开网页演示。"
-    },
-    {
-      title: "调研与转化",
-      text: "资料调研、方案逻辑梳理、文案整合、路演辅助、人员协调；能把复杂内容拆解为清晰表达。"
+      title: "上下文治理",
+      text: "进入下一步前主动压缩上下文或新开窗口，把无关试错与历史噪声隔离，减少上下文污染对判断和代码质量的影响。"
     }
   ],
   aiProjects: [
