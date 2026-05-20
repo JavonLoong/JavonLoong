@@ -56,6 +56,9 @@ window.resumeData = {
       points: [
         "复刻典型飞行轨迹、系留绳张力、功率曲线和 pumping-cycle 能量账本，将 COMSOL 气动极线接入 Python 主仿真。",
         "搭建 42-case 软件闭环和汇报材料，保留 COMSOL 与 Python 各自承担的证据边界。"
+      ],
+      links: [
+        { label: "打开仿真展示页", url: "../portfolio/awes-comsol/" }
       ]
     },
     {
