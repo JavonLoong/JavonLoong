@@ -11,11 +11,7 @@ window.resumeData = {
       "我更擅长把一个模糊任务做成能交付的结果：先厘清资料、对象和证据，再搭工具、做验证，最后用网页、PPT 或 PDF 把结论讲清楚。"
   },
   links: [
-    { label: "GitHub", url: "https://github.com/JavonLoong" },
-    { label: "RAG 控制台", url: "https://javonloong.github.io/RAG/" },
-    { label: "MoonCake Studio", url: "https://javonloong.github.io/Mooncake-Modle/" },
-    { label: "Guang 技术知识网站", url: "https://javonloong.github.io/guang-website/" },
-    { label: "PDF 简历", url: "../resume/javon-ai-resume.pdf" }
+    { label: "GitHub", url: "https://github.com/JavonLoong" }
   ],
   abilities: [
     {
@@ -42,33 +38,24 @@ window.resumeData = {
   aiProjects: [
     {
       name: "动力装备知识库控制台",
-      type: "RAG / GraphRAG",
-      tags: ["FastAPI", "ChromaDB", "向量检索", "Graph construction"],
+      type: "RAG 与 GraphRAG",
+      tags: ["知识库构建", "向量检索", "GraphRAG", "后端控制台"],
       points: [
         "搭建上传、入库、检索、benchmark、日志查看控制台，用 FastAPI / Chroma 管理文档切片、索引和运行数据。",
-        "围绕 6098 页动力装备资料完成可审计处理，沉淀 593 条 chunk，推进普通 RAG 到 GraphRAG / 知识图谱构建的前置实验。"
+        "围绕 6098 页动力装备资料完成可审计处理，沉淀 593 条 chunk，推进普通 RAG 到 GraphRAG 与知识图谱构建的前置实验。"
       ],
       links: [
-        { label: "Demo", url: "https://javonloong.github.io/RAG/" },
-        { label: "Repo", url: "https://github.com/JavonLoong/RAG" }
+        { label: "在线演示", url: "https://javonloong.github.io/RAG/" },
+        { label: "源码仓库", url: "https://github.com/JavonLoong/RAG" }
       ]
     },
     {
-      name: "高空风能 AWES / COMSOL 仿真复刻",
+      name: "高空风能 AWES 与 COMSOL 仿真复刻",
       type: "工程仿真",
-      tags: ["COMSOL", "Python 主仿真", "八字轨迹", "pumping cycle"],
+      tags: ["工程仿真", "COMSOL 建模", "数值计算", "结果验证"],
       points: [
-        "复刻八字形轨迹、系留绳张力、功率曲线和 pumping-cycle 能量账本，将 COMSOL 气动极线接入 Python 主仿真。",
+        "复刻典型飞行轨迹、系留绳张力、功率曲线和 pumping-cycle 能量账本，将 COMSOL 气动极线接入 Python 主仿真。",
         "搭建 42-case 软件闭环和汇报材料，保留 COMSOL 与 Python 各自承担的证据边界。"
-      ]
-    },
-    {
-      name: "“步步”智能伴学系统",
-      type: "教育 AI 产品",
-      tags: ["AI + SOP", "执行力训练", "学生端", "教师 / 家长看板"],
-      points: [
-        "设计执行力训练型学习产品，通过锁步任务、拍照提交、AI 判断和看板反馈强化学习过程。",
-        "形成概念书、竞品分析、Android 学生端原型与业务流程，覆盖从产品定位到交互落地的链路。"
       ]
     },
     {
@@ -94,21 +81,8 @@ window.resumeData = {
         "支持 STL / GLB 导出，体现基础 3D 建模、交互设计和面向生产文件的工程意识。"
       ],
       links: [
-        { label: "Demo", url: "https://javonloong.github.io/Mooncake-Modle/" },
-        { label: "Repo", url: "https://github.com/JavonLoong/Mooncake-Modle" }
-      ]
-    },
-    {
-      name: "Guang 技术知识网站",
-      type: "内容系统",
-      tags: ["React", "Vite", "Markdown", "GitHub Pages"],
-      points: [
-        "搭建 React + Vite + Markdown 的公开知识网站，包含文章、标签、路由、卡片和 GitHub Pages 部署。",
-        "将学习记录整理为可持续更新的内容系统，补足“能做系统，也能组织知识和表达”的证据。"
-      ],
-      links: [
-        { label: "Demo", url: "https://javonloong.github.io/guang-website/" },
-        { label: "Repo", url: "https://github.com/JavonLoong/guang-website" }
+        { label: "在线演示", url: "https://javonloong.github.io/Mooncake-Modle/" },
+        { label: "源码仓库", url: "https://github.com/JavonLoong/Mooncake-Modle" }
       ]
     }
   ],

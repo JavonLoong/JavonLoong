@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>纪文龙 | Formal CV</title>
-  <meta name="description" content="纪文龙的正式在线 CV，聚焦教育背景、荣誉奖项、社会经历、海外实践、志愿服务与 AI 与工程项目。">
+  <meta name="description" content="纪文龙的正式在线 CV，聚焦荣誉奖项、社会经历、海外实践、志愿服务与 AI 与工程项目。">
   <style>
     :root {
       --page: #eef0ec;
@@ -681,19 +681,9 @@
 
       <article class="main">
         <div class="content">
-          <section class="section" id="education" aria-labelledby="education-title">
-            <div class="section-head">
-              <div class="section-no">01</div>
-              <div class="section-title">
-                <h2 id="education-title">教育背景</h2>
-              </div>
-            </div>
-            <div class="entry-list" id="education-list"></div>
-          </section>
-
           <section class="section" id="awards" aria-labelledby="awards-title">
             <div class="section-head">
-              <div class="section-no">02</div>
+              <div class="section-no">01</div>
               <div class="section-title">
                 <h2 id="awards-title">荣誉奖项与学科竞赛</h2>
                 <p>整合三份 DOCX 与数据源，按正式投递场景分组呈现，减少视觉噪声。</p>
@@ -704,7 +694,7 @@
 
           <section class="section" id="experience" aria-labelledby="experience-title">
             <div class="section-head">
-              <div class="section-no">03</div>
+              <div class="section-no">02</div>
               <div class="section-title">
                 <h2 id="experience-title">经历与公共实践</h2>
                 <p>覆盖社会工作、海外实践、志愿公益和教学表达，强调职责、结果与协作能力。</p>
@@ -715,7 +705,7 @@
 
           <section class="section" id="projects" aria-labelledby="projects-title">
             <div class="section-head">
-              <div class="section-no">04</div>
+              <div class="section-no">03</div>
               <div class="section-title">
                 <h2 id="projects-title">AI 与工程项目</h2>
                 <p>以可验证的项目事实为主体，保留技术栈、规模、过程和公开链接。</p>
@@ -729,7 +719,7 @@
     </div>
   </main>
 
-  <script src="../assets/resume-data.js"></script>
+  <script src="../assets/resume-data.js?v=20260520-ppt-links"></script>
   <script>
     (function () {
       "use strict";
@@ -743,14 +733,6 @@
       );
 
       const docxSupplement = {
-        education: [
-          {
-            period: "2024.09 - 2028.07",
-            title: "清华大学 · 行健书院 · 本科",
-            subtitle: "烽火 4 · 理论与应用力学 + 能源与动力工程双学位",
-            points: []
-          }
-        ],
         extraAwards: [
           "2021-2022 学年鹤壁市高中校级特优生",
           "2022 年鹤壁市“三好学生”"
@@ -815,19 +797,6 @@
             <strong>${escapeHTML(ability.title)}</strong>
             <span>${escapeHTML(ability.text)}</span>
           </li>
-        `).join("");
-      }
-
-      function renderEducation() {
-        $("#education-list").innerHTML = docxSupplement.education.map((entry) => `
-          <article class="entry">
-            <div class="entry-meta">${escapeHTML(entry.period)}</div>
-            <div class="entry-body">
-              <h3>${escapeHTML(entry.title)}</h3>
-              <p class="entry-subtitle">${escapeHTML(entry.subtitle)}</p>
-              ${(entry.points || []).length ? `<ul>${listItems(entry.points)}</ul>` : ""}
-            </div>
-          </article>
         `).join("");
       }
 
@@ -904,20 +873,25 @@
       }
 
       function renderProjects() {
-        const projects = (data.aiProjects || []).filter((project) => !/步步|伴学/.test(project.name || ""));
+        const projects = data.aiProjects || [];
         const cvTags = (project) => {
           const name = project.name || "";
           if (/动力装备|RAG|GraphRAG/.test(name)) return ["知识库构建", "向量检索", "GraphRAG", "后端控制台"];
           if (/高空风能|COMSOL|AWES/.test(name)) return ["工程仿真", "COMSOL 建模", "数值计算", "结果验证"];
           if (/美育|PPT|图像/.test(name)) return ["视觉审美", "PPT 叙事", "图像生成", "版式控制"];
           if (/MoonCake|月饼|模具/.test(name)) return ["参数化建模", "三维交互", "几何建模", "工程导出"];
-          if (/Guang|知识网站/.test(name)) return ["知识组织", "内容架构", "Markdown 写作", "前端部署"];
           return project.tags || [];
         };
         const linkLabel = (link) => {
-          if (/demo/i.test(link.label || "")) return "查看在线演示";
-          if (/repo/i.test(link.label || "")) return "查看源码仓库";
+          if (/demo|在线演示/i.test(link.label || "")) return "点击进入在线演示";
+          if (/repo|源码仓库/i.test(link.label || "")) return "打开源码仓库";
           return link.label || "查看链接";
+        };
+        const linkTitle = (link, project) => {
+          const label = link.label || "";
+          if (/demo|在线演示/i.test(label)) return `点击后进入「${project.name}」在线演示`;
+          if (/repo|源码仓库/i.test(label)) return `点击后打开「${project.name}」源码仓库`;
+          return `点击后打开「${project.name}」相关材料`;
         };
         $("#project-grid").innerHTML = projects.map((project) => `
           <article class="project-card">
@@ -927,14 +901,13 @@
             </div>
             <ul>${listItems(project.points)}</ul>
             <div class="tags">${cvTags(project).map((tag) => `<span>${escapeHTML(tag)}</span>`).join("")}</div>
-            ${(project.links || []).length ? `<div class="project-links">${project.links.map((link) => `<a href="${escapeHTML(normalizeUrl(link.url))}" target="_blank" rel="noreferrer">${escapeHTML(linkLabel(link))}</a>`).join("")}</div>` : ""}
+            ${(project.links || []).length ? `<div class="project-links">${project.links.map((link) => `<a href="${escapeHTML(normalizeUrl(link.url))}" target="_blank" rel="noreferrer" title="${escapeHTML(linkTitle(link, project))}">${escapeHTML(linkLabel(link))}</a>`).join("")}</div>` : ""}
           </article>
         `).join("");
       }
 
       renderProfile();
       renderSkills();
-      renderEducation();
       renderAwards();
       renderExperience();
       renderProjects();

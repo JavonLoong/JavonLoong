@@ -866,10 +866,8 @@
       const projects = [
         { item: findProject("美育", "ppt", "视觉表达"), no: "01", theme: "visual", size: "feature", label: "Visual Direction" },
         { item: findProject("mooncake", "月饼", "three.js"), no: "02", theme: "moon", size: "feature", label: "3D Product Tool" },
-        { item: findProject("guang", "知识网站", "内容系统"), no: "03", theme: "guang", size: "standard", label: "Knowledge Website" },
-        { item: findProject("rag", "知识库", "graphrag"), no: "04", theme: "rag", size: "standard", label: "AI System" },
-        { item: findProject("comsol", "awes", "仿真"), no: "05", theme: "comsol", size: "standard", label: "Simulation" },
-        { item: findProject("步步", "伴学", "教育 ai"), no: "06", theme: "bubu", size: "standard", label: "Education Product" }
+        { item: findProject("rag", "知识库", "graphrag"), no: "03", theme: "rag", size: "standard", label: "AI System" },
+        { item: findProject("comsol", "awes", "仿真"), no: "04", theme: "comsol", size: "standard", label: "Simulation" }
       ].filter((entry) => entry.item);
 
       const pdf = linkBy("pdf") || { label: "PDF 简历", url: "../resume/javon-ai-resume.pdf" };
@@ -937,7 +935,7 @@
           <div class="section-head">
             <div class="section-no">02</div>
             <div class="section-title"><span class="section-kicker">Portfolio Cases / Selected Works</span><h2 id="work-title">Work Index</h2></div>
-            <div class="section-note">前排强化视觉表达、美育 PPT、MoonCake 3D 和 Guang 网站；RAG、COMSOL、步步作为工程与产品证据保留在同一作品墙。</div>
+            <div class="section-note">前排强化视觉表达、美育 PPT 和 MoonCake 3D；RAG 与 COMSOL 作为工程证据保留在同一作品墙。</div>
           </div>
           <div class="case-grid">
             ${projects.map((entry) => `

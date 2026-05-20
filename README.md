@@ -38,12 +38,10 @@
 
 | 项目 | 说明 | 展示 |
 | --- | --- | --- |
-| 动力装备知识库控制台 | RAG / GraphRAG 预研；前端上传、入库、检索、benchmark、日志查看；围绕 6098 页资料沉淀 593 条 chunk。 | [Demo](https://javonloong.github.io/RAG/) · [Repo](https://github.com/JavonLoong/RAG) |
-| 高空风能 AWES / COMSOL 仿真复刻 | 复刻八字形轨迹、系留绳张力、功率曲线和 pumping-cycle 能量账本；将 COMSOL 气动极线接入 Python 主仿真。 | 本地工程材料 |
-| “步步”智能伴学系统 | 教育 AI 产品原型；锁步任务、拍照提交、AI 判断、教师 / 家长看板；形成概念书、竞品分析和学生端原型。 | 本地产品材料 |
+| 动力装备知识库控制台 | RAG 与 GraphRAG 预研；前端上传、入库、检索、benchmark、日志查看；围绕 6098 页资料沉淀 593 条 chunk。 | [在线演示](https://javonloong.github.io/RAG/) · [源码仓库](https://github.com/JavonLoong/RAG) |
+| 高空风能 AWES 与 COMSOL 仿真复刻 | 复刻典型飞行轨迹、系留绳张力、功率曲线和 pumping-cycle 能量账本；将 COMSOL 气动极线接入 Python 主仿真。 | 本地工程材料 |
 | 美育图像与 PPT 制作 | 素材筛选、生成图像、页面重绘、contact sheet 核对和 PPT 整理；强调审美判断与风格一致性。 | 本地汇报材料 |
-| MoonCake Studio 月饼模具设计器 | 浏览器端 3D 参数化建模；支持边缘轮廓、传统花纹、中文刻字、图片浮雕、STL / GLB 导出。 | [Demo](https://javonloong.github.io/Mooncake-Modle/) · [Repo](https://github.com/JavonLoong/Mooncake-Modle) |
-| Guang 技术知识网站 | React + Vite + Markdown 的公开知识网站，包含文章、标签、路由、卡片和 GitHub Pages 部署。 | [Demo](https://javonloong.github.io/guang-website/) · [Repo](https://github.com/JavonLoong/guang-website) |
+| MoonCake Studio 月饼模具设计器 | 浏览器端 3D 参数化建模；支持边缘轮廓、传统花纹、中文刻字、图片浮雕、STL / GLB 导出。 | [在线演示](https://javonloong.github.io/Mooncake-Modle/) · [源码仓库](https://github.com/JavonLoong/Mooncake-Modle) |
 
 ## 五版视觉简历
 

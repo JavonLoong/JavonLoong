@@ -395,6 +395,30 @@
       font-size: 13px;
     }
 
+    .project-links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border: 1px solid rgba(29, 112, 104, 0.36);
+      border-radius: 999px;
+      background: #edf5f2;
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .project-links a::after {
+      content: "↗";
+      margin-left: 8px;
+      color: var(--ochre);
+    }
+
+    .project-links a:hover {
+      border-color: var(--accent);
+      background: #e1eee9;
+      text-decoration: none;
+    }
+
     .timeline {
       display: grid;
       grid-template-columns: 160px minmax(0, 1fr);
@@ -493,7 +517,6 @@
         <a href="#abilities">能力</a>
         <a href="#resumes">五版简历</a>
         <a href="#projects">项目</a>
-        <a href="#education">教育</a>
         <a href="resume/javon-ai-resume.pdf">PDF 简历</a>
         <a href="https://github.com/JavonLoong">GitHub</a>
       </nav>
@@ -524,13 +547,7 @@
             <dt>方向</dt>
             <dd>理论与应用力学 + 能源与动力工程双学位</dd>
             <dd>已修读课程 24 门，其中必修课 17 门</dd>
-            <dd>AI 应用工程 / 工程仿真 / 产品原型</dd>
-          </div>
-          <div>
-            <dt>公开作品</dt>
-            <dd><a href="https://javonloong.github.io/RAG/">RAG 控制台</a></dd>
-            <dd><a href="https://javonloong.github.io/Mooncake-Modle/">MoonCake Studio</a></dd>
-            <dd><a href="https://javonloong.github.io/guang-website/">Guang 技术知识网站</a></dd>
+            <dd>AI 应用工程、工程仿真、产品原型</dd>
           </div>
           <div>
             <dt>联系方式</dt>
@@ -629,16 +646,16 @@
         <article class="project">
           <div class="project-top">
             <h3>动力装备知识库控制台</h3>
-            <span class="tag">RAG / GraphRAG</span>
+            <span class="tag">RAG 与 GraphRAG</span>
           </div>
-          <p class="keywords">FastAPI · ChromaDB · 向量检索 · 前端控制台 · Graph construction</p>
+          <p class="keywords">知识库构建 · 向量检索 · GraphRAG · 后端控制台</p>
           <ul>
             <li>搭建上传、入库、检索、benchmark、日志查看控制台，用 FastAPI / Chroma 管理文档切片、索引和运行数据。</li>
-            <li>围绕 6098 页动力装备资料完成可审计处理，沉淀 593 条 chunk，推进普通 RAG 到 GraphRAG / 知识图谱构建的前置实验。</li>
+            <li>围绕 6098 页动力装备资料完成可审计处理，沉淀 593 条 chunk，推进普通 RAG 到 GraphRAG 与知识图谱构建的前置实验。</li>
           </ul>
           <div class="project-links">
-            <a href="https://javonloong.github.io/RAG/">公开演示</a>
-            <a href="https://github.com/JavonLoong/RAG">GitHub 仓库</a>
+            <a href="https://javonloong.github.io/RAG/" title="点击后进入 RAG 控制台在线演示">点击进入在线演示</a>
+            <a href="https://github.com/JavonLoong/RAG" title="点击后打开 RAG 源码仓库">打开源码仓库</a>
           </div>
         </article>
 
@@ -649,20 +666,8 @@
           </div>
           <p class="keywords">COMSOL 建模 · Python 仿真 · 数值计算 · 结果验证 · 材料组织</p>
           <ul>
-            <li>复刻八字形轨迹、系留绳张力、功率曲线和 pumping-cycle 能量账本，将 COMSOL 气动极线接入 Python 主仿真。</li>
+            <li>复刻典型飞行轨迹、系留绳张力、功率曲线和 pumping-cycle 能量账本，将 COMSOL 气动极线接入 Python 主仿真。</li>
             <li>搭建 42-case 软件闭环和汇报材料，保留 COMSOL 与 Python 各自承担的证据边界。</li>
-          </ul>
-        </article>
-
-        <article class="project">
-          <div class="project-top">
-            <h3>“步步”智能伴学系统</h3>
-            <span class="tag">教育 AI 产品</span>
-          </div>
-          <p class="keywords">AI + SOP · 执行力训练 · 学生端 · 教师 / 家长看板</p>
-          <ul>
-            <li>设计执行力训练型学习产品，通过锁步任务、拍照提交、AI 判断和看板反馈强化学习过程。</li>
-            <li>形成概念书、竞品分析、Android 学生端原型与业务流程，覆盖从产品定位到交互落地的链路。</li>
           </ul>
         </article>
 
@@ -677,9 +682,9 @@
             <li>交付物可以直接打开查看，重点是审美判断、信息层级和版式稳定。</li>
           </ul>
           <div class="project-links">
-            <a href="portfolio/ppt/qucha-visual.pdf" target="_blank" rel="noreferrer">打开《趣茶》PDF</a>
-            <a href="portfolio/ppt/echo-plan/" target="_blank" rel="noreferrer">打开《回声计划》PPT</a>
-            <a href="portfolio/ppt/neurosync-v10/" target="_blank" rel="noreferrer">打开 NeuroSync PPT</a>
+            <a href="portfolio/ppt/qucha-visual.pdf" target="_blank" rel="noreferrer" title="点击后打开《趣茶》视觉 PDF">打开《趣茶》视觉稿</a>
+            <a href="portfolio/ppt/echo-plan/" target="_blank" rel="noreferrer" title="点击后打开《回声计划》PPT 页面">打开《回声计划》PPT</a>
+            <a href="portfolio/ppt/neurosync-v10/" target="_blank" rel="noreferrer" title="点击后打开 NeuroSync PPT 页面">打开 NeuroSync PPT</a>
           </div>
         </article>
 
@@ -694,46 +699,12 @@
             <li>支持 STL / GLB 导出，体现基础 3D 建模、交互设计和面向生产文件的工程意识。</li>
           </ul>
           <div class="project-links">
-            <a href="https://javonloong.github.io/Mooncake-Modle/">公开演示</a>
-            <a href="https://github.com/JavonLoong/Mooncake-Modle">GitHub 仓库</a>
-          </div>
-        </article>
-
-        <article class="project">
-          <div class="project-top">
-            <h3>Guang 技术知识网站</h3>
-            <span class="tag">内容系统</span>
-          </div>
-          <p class="keywords">React · Vite · Markdown · 内容组织 · GitHub Pages</p>
-          <ul>
-            <li>搭建 React + Vite + Markdown 的公开知识网站，包含文章、标签、路由、卡片和 GitHub Pages 部署。</li>
-            <li>将学习记录整理为可持续更新的内容系统，补足“能做系统，也能组织知识和表达”的证据。</li>
-          </ul>
-          <div class="project-links">
-            <a href="https://javonloong.github.io/guang-website/">公开演示</a>
-            <a href="https://github.com/JavonLoong/guang-website">GitHub 仓库</a>
+            <a href="https://javonloong.github.io/Mooncake-Modle/" title="点击后进入月饼模具设计器在线演示">点击进入在线演示</a>
+            <a href="https://github.com/JavonLoong/Mooncake-Modle" title="点击后打开 MoonCake Studio 源码仓库">打开源码仓库</a>
           </div>
         </article>
       </div>
     </section>
-
-    <section class="section" id="education">
-      <div class="section-head">
-        <h2>教育背景</h2>
-        <p>后续可补充课程、奖项和正式联系方式。</p>
-      </div>
-      <div class="timeline">
-        <div class="date">2024.09 -- 2028.07（预计）</div>
-        <div>
-          <h3>清华大学，行健书院，大二本科生</h3>
-          <p>理论与应用力学 + 能源与动力工程双学位；已修读课程 24 门，其中必修课 17 门。方向与兴趣：AI 应用工程、知识库 / RAG、工程仿真、交互原型、视觉表达。</p>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <p>Built as a static visual profile for GitHub Pages. Source files are editable in this repository.</p>
-    </footer>
   </main>
 </body>
 </html>
