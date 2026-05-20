@@ -24,7 +24,7 @@ window.resumeData = {
     },
     {
       title: "AI 辅助编程",
-      text: "更倾向可干预、可解释的 AI 辅助编程，而不是完全 vibe coding；核心逻辑要能说明来源、假设、验证和失败边界。"
+      text: "更倾向可干预、可解释的 AI 辅助编程，而不是完全 vibe coding；会用 few-shot 少样本提示减少重复抽卡，并按场景调 temperature，在创意发散和严谨验证之间切换。"
     },
     {
       title: "上下文治理",

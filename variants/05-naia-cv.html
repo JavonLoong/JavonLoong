@@ -672,7 +672,7 @@
           <div class="role-fit" aria-label="AI 方法论">
             <span><strong>工具与 Skill</strong>先看前人成果与开源项目，整合和微调优先，明确缺口后再自建</span>
             <span><strong>上下文工程</strong>先收敛整体 plan，再多子 agent 实现，由主 agent 审核并修正进度</span>
-            <span><strong>辅助编程</strong>保持人工干预，要求核心逻辑可解释、可审计、可验证</span>
+            <span><strong>辅助编程</strong>保持人工干预；用 few-shot 控重复，按场景调 temperature</span>
             <span><strong>上下文治理</strong>阶段性压缩或新开窗口，隔离试错噪声，减少上下文污染</span>
           </div>
         </header>
@@ -718,7 +718,7 @@
     </div>
   </main>
 
-  <script src="../assets/resume-data.js?v=20260520-ai-methodology"></script>
+  <script src="../assets/resume-data.js?v=20260520-ai-controls"></script>
   <script>
     (function () {
       "use strict";
