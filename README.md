@@ -18,6 +18,8 @@
   <a href="https://github.com/JavonLoong">GitHub</a>
   ·
   电话：16639250335
+  ·
+  邮箱：jwl24@mails.tsinghua.edu.cn
 </p>
 
 ## 个人定位

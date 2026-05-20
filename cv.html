@@ -728,7 +728,7 @@
     </div>
   </main>
 
-  <script src="assets/resume-data.js?v=20260520-dark-contact"></script>
+  <script src="assets/resume-data.js?v=20260520-contact-email"></script>
   <script>
     (function () {
       "use strict";
@@ -783,7 +783,8 @@
         setText("#statement", person.statement || "我把 AI 当成工程协作系统：先确认资料、边界与可复用工具，再用收敛的 plan、子 agent 实现、主 agent 审核和阶段性验证，把任务推进到可解释的交付。");
 
         const facts = [
-          ["Contact", person.contact || "16639250335"],
+          ["Phone", person.contact || "16639250335"],
+          ["Email", person.email || "jwl24@mails.tsinghua.edu.cn"],
           ["Education", person.title || "清华大学行健书院本科生"],
           ["Program", person.program || "理论与应用力学 + 能源与动力工程双学位"],
           ["Period", person.period || "2024.09 - 2028.07"]
