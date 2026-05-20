@@ -757,11 +757,7 @@
         ],
         roleFit: "资料调研 / 方案逻辑梳理 / 文案整合 / 路演辅助 / 人员协调",
         experienceEnhancements: {
-          volunteer: [
-            "2025 年高考招生志愿服务 35 小时，协助政策宣讲与咨询。",
-            "暑期校园日常讲解服务 34 小时，向访客传播清华历史与文化。",
-            "第 23 届“情系母校”回访母校活动 26 小时，搭建高校与中学沟通桥梁。"
-          ],
+          volunteer: [],
           teaching: [
             "参与组织地市拔尖提优辅导班，担任讲师和全科助教。",
             "可支持方案文字梳理、PPT 逻辑搭建、三分钟宣讲稿与答辩表达优化。"
@@ -794,7 +790,7 @@
         setText("#person-name", person.name || "纪文龙");
         setText("#person-roman", person.roman || "JavonLoong");
         setText("#person-title", person.title || "清华大学行健书院本科生");
-        setText("#statement", person.statement || "把 AI 从工具用法，变成可运行、可验证、可交付的工作系统。");
+        setText("#statement", person.statement || "把模糊任务做成能交付的结果：先厘清资料、对象和证据，再搭工具、做验证，最后用网页、PPT 或 PDF 把结论讲清楚。");
 
         const facts = [
           ["Education", person.title || "清华大学行健书院本科生"],
@@ -931,7 +927,7 @@
             </div>
             <ul>${listItems(project.points)}</ul>
             <div class="tags">${cvTags(project).map((tag) => `<span>${escapeHTML(tag)}</span>`).join("")}</div>
-            ${(project.links || []).length ? `<div class="project-links">${project.links.map((link) => `<a href="${escapeHTML(normalizeUrl(link.url))}">${escapeHTML(linkLabel(link))}</a>`).join("")}</div>` : ""}
+            ${(project.links || []).length ? `<div class="project-links">${project.links.map((link) => `<a href="${escapeHTML(normalizeUrl(link.url))}" target="_blank" rel="noreferrer">${escapeHTML(linkLabel(link))}</a>`).join("")}</div>` : ""}
           </article>
         `).join("");
       }
