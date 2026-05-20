@@ -70,9 +70,14 @@
       border-bottom: 1px solid var(--line);
     }
 
-    .profile-card {
+    .profile-column {
       min-width: 0;
       border-right: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .profile-card {
+      min-width: 0;
       background: var(--panel);
       padding: 34px 28px 28px;
     }
@@ -558,7 +563,7 @@
         grid-template-columns: 1fr;
       }
 
-      .profile-card {
+      .profile-column {
         border-right: 0;
         border-bottom: 1px solid var(--line);
       }
@@ -581,6 +586,7 @@
       }
 
       .profile-card,
+      .identity,
       .hero,
       .content {
         padding-right: 20px;
@@ -641,9 +647,17 @@
   <main class="page">
     <div class="cv">
       <section class="top-sheet" aria-label="简历首页信息">
-        <aside class="profile-card" aria-labelledby="profile-heading">
-          <h2 id="profile-heading">Profile</h2>
-          <ul class="facts" id="profile-facts"></ul>
+        <aside class="profile-column" aria-label="简历侧栏">
+          <header class="identity">
+            <p class="kicker">Curriculum Vitae</p>
+            <h1><span id="person-name">纪文龙</span><span class="roman" id="person-roman">JavonLoong</span></h1>
+            <p id="person-title">清华大学行健书院本科生</p>
+          </header>
+
+          <section class="profile-card" aria-labelledby="profile-heading">
+            <h2 id="profile-heading">Profile</h2>
+            <ul class="facts" id="profile-facts"></ul>
+          </section>
         </aside>
 
         <header class="hero">
