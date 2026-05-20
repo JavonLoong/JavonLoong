@@ -59,15 +59,22 @@
     }
 
     .cv {
-      display: grid;
-      grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
+      display: block;
       min-width: 0;
     }
 
-    .sidebar {
+    .top-sheet {
+      display: grid;
+      grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
+      min-width: 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .profile-card {
       min-width: 0;
       border-right: 1px solid var(--line);
       background: var(--panel);
+      padding: 34px 28px 28px;
     }
 
     .main {
@@ -133,6 +140,14 @@
       color: var(--green);
       font-size: 13px;
       letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .profile-card h2 {
+      margin: 0 0 22px;
+      color: var(--green);
+      font-size: 14px;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
     }
 
@@ -222,8 +237,7 @@
     }
 
     .hero {
-      padding: clamp(32px, 5vw, 58px) clamp(26px, 5vw, 62px) 34px;
-      border-bottom: 1px solid var(--line);
+      padding: clamp(26px, 4vw, 42px);
     }
 
     .hero-top {
@@ -250,9 +264,9 @@
     .doc-title h2 {
       margin: 8px 0 0;
       font-family: Georgia, "Times New Roman", "Songti SC", "SimSun", serif;
-      font-size: clamp(40px, 6vw, 76px);
+      font-size: clamp(32px, 4.4vw, 50px);
       font-weight: 500;
-      line-height: 0.98;
+      line-height: 1.02;
       letter-spacing: 0;
     }
 
@@ -282,10 +296,10 @@
     }
 
     .statement {
-      max-width: 760px;
-      margin: 30px 0 0;
+      max-width: none;
+      margin: 24px 0 0;
       color: #3f4744;
-      font-size: 18px;
+      font-size: 17px;
       line-height: 1.72;
     }
 
@@ -540,26 +554,13 @@
     }
 
     @media (max-width: 980px) {
-      .cv {
+      .top-sheet {
         grid-template-columns: 1fr;
       }
 
-      .sidebar {
+      .profile-card {
         border-right: 0;
         border-bottom: 1px solid var(--line);
-      }
-
-      .side-sections {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .side-block {
-        border-right: 1px solid var(--line);
-      }
-
-      .side-block:nth-child(2n) {
-        border-right: 0;
       }
 
       .role-fit {
@@ -579,26 +580,19 @@
         box-shadow: none;
       }
 
-      .identity,
-      .side-block,
+      .profile-card,
       .hero,
       .content {
         padding-right: 20px;
         padding-left: 20px;
       }
 
-      .side-sections,
       .hero-top,
       .section-head,
       .entry,
       .award-layout,
       .project-grid {
         grid-template-columns: 1fr;
-      }
-
-      .side-block,
-      .side-block:nth-child(2n) {
-        border-right: 0;
       }
 
       .hero-top {
@@ -637,12 +631,8 @@
         box-shadow: none;
       }
 
-      .cv {
+      .top-sheet {
         grid-template-columns: 300px minmax(0, 1fr);
-      }
-
-      .sidebar {
-        border-right: 1px solid var(--line);
       }
     }
   </style>
@@ -650,37 +640,12 @@
 <body>
   <main class="page">
     <div class="cv">
-      <aside class="sidebar" aria-label="简历侧栏">
-        <header class="identity">
-          <p class="kicker">Curriculum Vitae</p>
-          <h1><span id="person-name">纪文龙</span><span class="roman" id="person-roman">JavonLoong</span></h1>
-          <p id="person-title">清华大学行健书院本科生</p>
-        </header>
+      <section class="top-sheet" aria-label="简历首页信息">
+        <aside class="profile-card" aria-labelledby="profile-heading">
+          <h2 id="profile-heading">Profile</h2>
+          <ul class="facts" id="profile-facts"></ul>
+        </aside>
 
-        <div class="side-sections">
-          <section class="side-block" aria-labelledby="profile-heading">
-            <h2 id="profile-heading">Profile</h2>
-            <ul class="facts" id="profile-facts"></ul>
-          </section>
-
-          <section class="side-block" aria-labelledby="skills-heading">
-            <h2 id="skills-heading">Core Skills</h2>
-            <ul class="skills" id="skills-list"></ul>
-          </section>
-
-          <section class="side-block" aria-labelledby="metrics-heading">
-            <h2 id="metrics-heading">Highlights</h2>
-            <ul class="metrics">
-              <li><span class="metric-number">6098</span><span class="metric-label">页动力装备资料处理</span></li>
-              <li><span class="metric-number">593</span><span class="metric-label">条 RAG chunk 沉淀</span></li>
-              <li><span class="metric-number">42</span><span class="metric-label">case 仿真闭环</span></li>
-              <li><span class="metric-number">204h</span><span class="metric-label">志愿公益服务</span></li>
-            </ul>
-          </section>
-        </div>
-      </aside>
-
-      <article class="main">
         <header class="hero">
           <div class="hero-top">
             <div class="doc-title">
@@ -691,21 +656,22 @@
           </div>
           <p class="statement" id="statement"></p>
           <div class="role-fit" aria-label="投递方向">
-            <span><strong>AI 工程</strong>RAG、Prompt / SOP、工具调用与控制台原型</span>
-            <span><strong>工程计算</strong>仿真复刻、参数对比、结果验证与材料组织</span>
-            <span><strong>产品原型</strong>学习系统、业务流程、交互逻辑与演示交付</span>
-            <span><strong>内容表达</strong>PPT、网页、图像与技术叙事</span>
-            <span><strong>团队协作</strong>资料调研、文案整合、路演辅助与人员协调</span>
+            <span><strong>AI 协作</strong>Prompt 设计、CoT 任务拆解、MCP / 函数调用、Agent 分工与审核</span>
+            <span><strong>工程实现</strong>Python、FastAPI、ChromaDB、React、Vite、Three.js、LaTeX</span>
+            <span><strong>仿真与数据</strong>COMSOL 气动极线、AWES 复刻、数据清洗、结果验证</span>
+            <span><strong>表达交付</strong>PPT 制作、图像生成重绘、汇报材料整理、公开网页演示</span>
+            <span><strong>调研与转化</strong>资料调研、方案逻辑梳理、文案整合、路演辅助与人员协调</span>
           </div>
         </header>
+      </section>
 
+      <article class="main">
         <div class="content">
           <section class="section" id="education" aria-labelledby="education-title">
             <div class="section-head">
               <div class="section-no">01</div>
               <div class="section-title">
                 <h2 id="education-title">教育背景</h2>
-                <p>正式 CV 的第一屏信息：学校、专业方向、培养周期与学术基础。</p>
               </div>
             </div>
             <div class="entry-list" id="education-list"></div>
@@ -768,10 +734,7 @@
             period: "2024.09 - 2028.07",
             title: "清华大学 · 行健书院 · 本科",
             subtitle: "烽火 4 · 理论与应用力学 + 能源与动力工程双学位",
-            points: [
-              "关注 AI 应用工程、工程仿真复刻、知识库 / RAG、产品原型与视觉表达。",
-              "具备信息检索、逻辑分析、快速学习、资料整理与面向展示交付的综合能力。"
-            ]
+            points: []
           }
         ],
         extraAwards: [
@@ -835,6 +798,7 @@
       }
 
       function renderSkills() {
+        if (!$("#skills-list")) return;
         const abilities = data.abilities || [];
         $("#skills-list").innerHTML = abilities.map((ability) => `
           <li class="skill-item">
@@ -851,7 +815,7 @@
             <div class="entry-body">
               <h3>${escapeHTML(entry.title)}</h3>
               <p class="entry-subtitle">${escapeHTML(entry.subtitle)}</p>
-              <ul>${listItems(entry.points)}</ul>
+              ${(entry.points || []).length ? `<ul>${listItems(entry.points)}</ul>` : ""}
             </div>
           </article>
         `).join("");
