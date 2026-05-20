@@ -685,7 +685,7 @@
             <div class="section-head">
               <div class="section-no">01</div>
               <div class="section-title">
-                <h2 id="awards-title">荣誉奖项与学科竞赛</h2>
+                <h2 id="awards-title">荣誉奖项与竞赛奖项</h2>
                 <p>整合三份 DOCX 与数据源，按正式投递场景分组呈现，减少视觉噪声。</p>
               </div>
             </div>
@@ -719,7 +719,7 @@
     </div>
   </main>
 
-  <script src="../assets/resume-data.js?v=20260520-activity-merge"></script>
+  <script src="../assets/resume-data.js?v=20260520-award-group"></script>
   <script>
     (function () {
       "use strict";
@@ -807,7 +807,7 @@
         const campus = [];
 
         allAwards.forEach((item) => {
-          if (/竞赛|赛区|理论力学|中学生数学|物理|生物|化学/.test(item)) {
+          if (/竞赛|赛区|理论力学|中学生数学|物理|生物|化学|Agent 设计奖励|模型设计奖励|优秀创意/.test(item)) {
             competition.push(item);
           } else if (/奖学金|强基|励志|海昌|读书郎/.test(item)) {
             scholarship.push(item);
@@ -818,7 +818,7 @@
 
         return [
           ["奖学金与选拔荣誉", scholarship],
-          ["学科竞赛", competition],
+          ["竞赛奖项", competition],
           ["校园荣誉与公益", campus]
         ].filter((group) => group[1].length);
       }
