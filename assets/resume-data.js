@@ -80,7 +80,7 @@ window.resumeData = {
       ],
       links: [
         { label: "打开《趣茶》PDF", url: "../portfolio/ppt/qucha-visual.pdf" },
-        { label: "打开《回声计划》PPT", url: "../portfolio/ppt/echo-plan/" },
+        { label: "打开《回声计划》精选版", url: "../portfolio/ppt/echo-plan-refined/" },
         { label: "打开 NeuroSync PPT", url: "../portfolio/ppt/neurosync-v10/" }
       ]
     },
