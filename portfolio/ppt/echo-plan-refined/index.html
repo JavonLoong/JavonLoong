@@ -71,6 +71,83 @@
       margin-top: 30px;
     }
 
+    .feature {
+      display: grid;
+      gap: 20px;
+      margin-top: 32px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .feature-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 430px);
+      gap: 22px;
+      align-items: end;
+    }
+
+    h2 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", "SimSun", serif;
+      font-size: clamp(28px, 4vw, 52px);
+      line-height: 1.05;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+
+    .feature-copy {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.85;
+      text-align: right;
+    }
+
+    .visual-overview img {
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
+    .artifact-grid {
+      display: grid;
+      grid-template-columns: .82fr .76fr 1fr;
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    .artifact {
+      margin: 0;
+      padding: 10px;
+      background: #fff;
+      border: 1px solid var(--line);
+    }
+
+    .artifact img {
+      height: 360px;
+      object-fit: contain;
+      background: #fbfaf6;
+    }
+
+    .artifact figcaption {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 10px;
+      color: var(--ink);
+      text-transform: none;
+      letter-spacing: 0;
+      font-size: 13px;
+    }
+
+    .artifact strong {
+      font-size: 15px;
+    }
+
+    .artifact span {
+      color: var(--muted);
+    }
+
     figure {
       margin: 0;
       padding: 14px;
@@ -98,8 +175,17 @@
         grid-template-columns: 1fr;
       }
 
+      .feature-head,
+      .artifact-grid {
+        grid-template-columns: 1fr;
+      }
+
       .meta {
         max-width: none;
+        text-align: left;
+      }
+
+      .feature-copy {
         text-align: left;
       }
 
@@ -111,6 +197,11 @@
       figure {
         padding: 8px;
       }
+
+      .artifact img {
+        height: auto;
+        aspect-ratio: 4 / 3;
+      }
     }
   </style>
 </head>
@@ -121,16 +212,65 @@
         <p class="eyebrow">PPT Preview</p>
         <h1>回声计划精选版</h1>
       </div>
-      <p class="meta">一组以“听障儿童语言支持”为主题的汇报型 PPT，选用更干净的图形主视觉，重点展示资料整理、视觉重绘和版式控制。</p>
+      <p class="meta">一组以“听障儿童语言支持”为主题的汇报型 PPT，选用更干净的图形主视觉，重点展示资料整理、视觉重绘、版式控制和落地物设计。</p>
     </header>
+
+    <section class="feature" aria-label="回声计划视觉识别三件套">
+      <div class="feature-head">
+        <div>
+          <p class="eyebrow">Visual Identity</p>
+          <h2>视觉识别三件套</h2>
+        </div>
+        <p class="feature-copy">把“用手相连，让声音被看见”的视觉系统拆成可以直接落地的三种物料：社团海报、核心标识、项目宣传页。下面每张图都能点开查看大图。</p>
+      </div>
+      <figure class="visual-overview">
+        <a href="visuals/visual-system-overview.jpg" target="_blank" rel="noreferrer" title="点开查看回声计划视觉识别完整板">
+          <img src="visuals/visual-system-overview.jpg" alt="回声计划视觉识别完整展示板">
+        </a>
+        <figcaption>Visual Identity Board</figcaption>
+      </figure>
+      <div class="artifact-grid">
+        <figure class="artifact">
+          <a href="visuals/visual-poster.jpg" target="_blank" rel="noreferrer" title="点开查看社团海报大图">
+            <img src="visuals/visual-poster.jpg" alt="回声计划社团海报">
+          </a>
+          <figcaption><strong>社团海报</strong><span>声音可视化</span></figcaption>
+        </figure>
+        <figure class="artifact">
+          <a href="visuals/visual-mark.jpg" target="_blank" rel="noreferrer" title="点开查看核心标识大图">
+            <img src="visuals/visual-mark.jpg" alt="回声计划核心标识">
+          </a>
+          <figcaption><strong>核心标识</strong><span>双手与听觉符号</span></figcaption>
+        </figure>
+        <figure class="artifact">
+          <a href="visuals/visual-promo-page.jpg" target="_blank" rel="noreferrer" title="点开查看项目宣传页大图">
+            <img src="visuals/visual-promo-page.jpg" alt="回声计划项目宣传页">
+          </a>
+          <figcaption><strong>项目宣传页</strong><span>回声行动</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
     <section class="slides" aria-label="回声计划精选版 PPT 页面预览"></section>
   </main>
   <script>
     const slides = Array.from({ length: 10 }, (_, index) => `slides/slide-${String(index + 1).padStart(2, "0")}.jpg`);
+    const captions = [
+      "封面",
+      "收获与下一步",
+      "问题背景",
+      "核心问题",
+      "调研设计",
+      "问卷信号",
+      "可行性模型",
+      "风险与方案",
+      "外联与宣传",
+      "视觉识别"
+    ];
     document.querySelector(".slides").innerHTML = slides.map((src, index) => `
       <figure>
         <img src="${src}" alt="回声计划精选版 PPT 第 ${index + 1} 页" loading="${index < 2 ? "eager" : "lazy"}">
-        <figcaption>Slide ${String(index + 1).padStart(2, "0")}</figcaption>
+        <figcaption>Slide ${String(index + 1).padStart(2, "0")} · ${captions[index]}</figcaption>
       </figure>
     `).join("");
   </script>
