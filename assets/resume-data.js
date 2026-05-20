@@ -6,6 +6,7 @@ window.resumeData = {
     program: "理论与应用力学 + 能源与动力工程双学位",
     period: "2024.09 - 2028.07（预计）",
     coursework: "已修读课程 24 门，其中必修课 17 门",
+    contact: "16639250335",
     positioning: "AI 应用工程、工程仿真复刻、产品原型与视觉表达",
     statement:
       "我把 AI 当成工程协作系统：先确认资料、边界与可复用工具，再用收敛的 plan、子 agent 实现、主 agent 审核和阶段性验证，把任务推进到可解释的交付。"

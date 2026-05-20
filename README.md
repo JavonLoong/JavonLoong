@@ -16,6 +16,8 @@
   <a href="resume/javon-ai-resume.tex">LaTeX 源码</a>
   ·
   <a href="https://github.com/JavonLoong">GitHub</a>
+  ·
+  电话：16639250335
 </p>
 
 ## 个人定位
