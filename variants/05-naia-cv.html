@@ -515,7 +515,28 @@
     }
 
     .project-links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border: 1px solid rgba(32, 88, 79, 0.35);
+      border-radius: 999px;
+      background: #eef5f2;
       color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .project-links a::after {
+      content: "↗";
+      margin-left: 8px;
+      color: var(--gold);
+      font-weight: 800;
+    }
+
+    .project-links a:hover {
+      border-color: var(--green);
+      background: #e2eee9;
     }
 
     @media (max-width: 980px) {
@@ -910,6 +931,20 @@
 
       function renderProjects() {
         const projects = (data.aiProjects || []).filter((project) => !/步步|伴学/.test(project.name || ""));
+        const cvTags = (project) => {
+          const name = project.name || "";
+          if (/动力装备|RAG|GraphRAG/.test(name)) return ["知识库构建", "向量检索", "GraphRAG", "后端控制台"];
+          if (/高空风能|COMSOL|AWES/.test(name)) return ["工程仿真", "COMSOL 建模", "数值计算", "结果验证"];
+          if (/美育|PPT|图像/.test(name)) return ["视觉审美", "PPT 叙事", "图像生成", "版式控制"];
+          if (/MoonCake|月饼|模具/.test(name)) return ["参数化建模", "三维交互", "几何建模", "工程导出"];
+          if (/Guang|知识网站/.test(name)) return ["知识组织", "内容架构", "Markdown 写作", "前端部署"];
+          return project.tags || [];
+        };
+        const linkLabel = (link) => {
+          if (/demo/i.test(link.label || "")) return "查看在线演示";
+          if (/repo/i.test(link.label || "")) return "查看源码仓库";
+          return link.label || "查看链接";
+        };
         $("#project-grid").innerHTML = projects.map((project) => `
           <article class="project-card">
             <div class="project-top">
@@ -917,8 +952,8 @@
               <span class="project-type">${escapeHTML(project.type)}</span>
             </div>
             <ul>${listItems(project.points)}</ul>
-            <div class="tags">${(project.tags || []).map((tag) => `<span>${escapeHTML(tag)}</span>`).join("")}</div>
-            ${(project.links || []).length ? `<div class="project-links">${project.links.map((link) => `<a href="${escapeHTML(normalizeUrl(link.url))}">${escapeHTML(link.label)}</a>`).join("")}</div>` : ""}
+            <div class="tags">${cvTags(project).map((tag) => `<span>${escapeHTML(tag)}</span>`).join("")}</div>
+            ${(project.links || []).length ? `<div class="project-links">${project.links.map((link) => `<a href="${escapeHTML(normalizeUrl(link.url))}">${escapeHTML(linkLabel(link))}</a>`).join("")}</div>` : ""}
           </article>
         `).join("");
       }
