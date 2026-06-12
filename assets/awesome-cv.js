@@ -138,6 +138,13 @@
           </div>
         </div>
         <aside class="hero-side">
+          <div class="portrait-row">
+            <img class="profile-photo" src="resume/profile-photo.jpg" alt="${esc(person.name)} portrait">
+            <div class="portrait-mark">
+              <span>FORMAL CV</span>
+              <strong>${esc(person.roman || person.name)}</strong>
+            </div>
+          </div>
           <dl class="profile-grid">
             <div><dt>姓名</dt><dd>${esc(person.name)} / ${esc(person.roman)}</dd></div>
             <div><dt>身份</dt><dd>${esc(person.title)}</dd></div>

@@ -192,6 +192,42 @@ h1 {
   gap: 24px;
 }
 
+.portrait-row {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 16px;
+  align-items: end;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.profile-photo {
+  width: 96px;
+  aspect-ratio: 86 / 110;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  background: #dce4eb;
+  box-shadow: 5px 5px 0 rgba(22, 22, 22, 0.9);
+}
+
+.portrait-mark {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+}
+
+.portrait-mark span {
+  color: var(--quiet);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.portrait-mark strong {
+  font-size: 22px;
+  line-height: 1.05;
+}
+
 .profile-grid {
   display: grid;
   gap: 12px;
@@ -509,5 +545,13 @@ body[data-variant="figma"] .award-card:nth-child(1) {
 
   .hero {
     min-height: auto;
+  }
+
+  .portrait-row {
+    grid-template-columns: 82px minmax(0, 1fr);
+  }
+
+  .profile-photo {
+    width: 82px;
   }
 }

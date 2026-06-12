@@ -62,11 +62,11 @@
 - `cv.html`：与根页面相同的 Figma 风格正式 CV 页面。
 - `assets/profile-preview.svg`：README 头图。
 - `assets/resume-data.js`：网页简历共用的结构化履历数据。
-- `resume/javon-formal-cv-cn.pdf`：基于 `moderncv` 的中文 A4 两页正式 PDF CV，右上角预留照片位置。
+- `resume/javon-formal-cv-cn.pdf`：基于 `moderncv` 的中文 A4 两页正式 PDF CV，右上角已嵌入正式证件照。
 - `resume/javon-formal-cv-cn.tex`：中文 PDF CV 的可编辑 LaTeX 源码。
-- `resume/javon-formal-cv.pdf`：基于 `moderncv` 的英文 A4 两页正式 PDF CV，右上角预留照片位置。
+- `resume/javon-formal-cv.pdf`：基于 `moderncv` 的英文 A4 两页正式 PDF CV，右上角已嵌入正式证件照。
 - `resume/javon-formal-cv.tex`：基于 `moderncv` 官方模板改写的英文 LaTeX CV 源码。
-- `resume/profile-photo-placeholder.pdf`：照片占位文件；替换为真实证件照时，可保持文件名不变并重新编译 CV。
+- `resume/profile-photo.jpg`：由证件照按简历照片框比例裁剪生成，供网页 CV 与两份 PDF CV 共用。
 
 ## 内容参考
 
