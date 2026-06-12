@@ -164,7 +164,7 @@
           <span class="section-no">01 / Method</span>
           <div>
             <h2>AI 使用方法论</h2>
-            <p>把 AI 当成工程协作系统，而不是自动抽卡系统：先定边界，再拆任务，再审证据。</p>
+            <p>把 AI 当成工程协作系统：先明确目标和验收标准，再拆任务、做验证、留证据。</p>
           </div>
         </div>
         <div class="method-grid">${methodCards()}</div>
