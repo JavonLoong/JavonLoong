@@ -66,6 +66,7 @@
   const person = data.person || {};
   const isNested = location.pathname.includes("/variants/");
   const isFormalCv = !isNested && /\/cv\.html$/i.test(location.pathname);
+  const rootPath = isNested ? "../" : "";
 
   const esc = (value) => String(value || "").replace(/[&<>"']/g, (char) => ({
     "&": "&amp;",
@@ -166,16 +167,16 @@
   app.innerHTML = `
     <main class="cv-shell">
       <header class="cv-nav">
-        <a class="cv-brand" href="${isNested ? "../design-lab.html" : "design-lab.html"}">
+        <a class="cv-brand" href="${rootPath}index.html">
           <strong>${esc(person.name)} · ${esc(person.roman)}</strong>
-          <span>${esc(variant.name)} inspired CV option</span>
+          <span>${isFormalCv ? "Formal online CV" : `${esc(variant.name)} inspired CV option`}</span>
         </a>
         <nav class="nav-links" aria-label="页面导航">
           <a href="#method">方法</a>
           <a href="#projects">项目</a>
           <a href="#experience">经历</a>
-          <a href="${isNested ? "../cv.html" : "cv.html"}">正式 CV</a>
-          <a href="${isNested ? "../design-lab.html" : "design-lab.html"}">样式入口</a>
+          <a href="${rootPath}cv.html">正式 CV</a>
+          <a href="${rootPath}index.html">主页</a>
         </nav>
       </header>
 
@@ -249,7 +250,7 @@
         <div class="award-grid">${awards()}</div>
       </section>
 
-      <p class="footer-note">${isFormalCv ? "Formal online CV using the selected WIRED-inspired direction." : `Style exploration for ${esc(person.name)}. The selected formal CV is available at <a href="${isNested ? "../cv.html" : "cv.html"}">cv.html</a>.`}</p>
+      <p class="footer-note">${isFormalCv ? `Formal online CV using the selected ${esc(variant.name)}-inspired direction.` : `Style exploration for ${esc(person.name)}. The selected formal CV is available at <a href="${rootPath}cv.html">cv.html</a>.`}</p>
     </main>
   `;
 }());
