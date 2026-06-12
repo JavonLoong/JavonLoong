@@ -1,7 +1,7 @@
 # 纪文龙 | JavonLoong
 
 <p align="center">
-  <img src="assets/profile-preview.svg" alt="纪文龙 AI 应用工程作品集视觉预览" width="100%">
+  <img src="assets/profile-preview.svg" alt="纪文龙 Figma 风格正式 CV 视觉预览" width="100%">
 </p>
 
 <p align="center">
