@@ -43,7 +43,7 @@
 
 | 项目 | 说明 | 展示 |
 | --- | --- | --- |
-| 动力装备知识库控制台 | RAG 与 GraphRAG 预研；前端上传、入库、检索、benchmark、日志查看；围绕 6098 页资料沉淀 593 条 chunk。 | [在线演示](https://javonloong.github.io/RAG/) · [源码仓库](https://github.com/JavonLoong/RAG) |
+| 动力装备领域 RAG/GraphRAG 智能知识问答系统 | 面向燃气轮机、风电设备等资料查阅难和问答无依据问题，负责文档解析/OCR 清洗、智能分块、向量入库、检索接口、GraphRAG 图谱能力、自动化评测与 Web 控制台；围绕 6098 页资料沉淀 593 条 chunk。 | [在线演示](https://javonloong.github.io/RAG/) · [源码仓库](https://github.com/JavonLoong/RAG) |
 | 高空风能 AWES 与 COMSOL 仿真复刻 | 复刻典型飞行轨迹、系留绳张力、功率曲线和 pumping-cycle 能量账本；将 COMSOL 气动极线接入 Python 主仿真。 | 本地工程材料 |
 | 智能电子产品创新实践课程项目 | AI Agent 与 AIGC 设计；完成需求拆解、交互流程、Agent 原型、混元 3D 模型生成与展示方案，获 Agent 设计二等奖和混元 3D 模型设计一等奖。 | [课程复盘视频](https://v.douyin.com/Bx2r1kX1LPo/) |
 | 美育图像与 PPT 制作 | 素材筛选、生成图像、页面重绘、contact sheet 核对和 PPT 整理；强调审美判断与风格一致性。 | 本地汇报材料 |

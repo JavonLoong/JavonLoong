@@ -34,12 +34,12 @@ window.resumeData = {
   ],
   aiProjects: [
     {
-      name: "动力装备知识库控制台",
-      type: "RAG 与 GraphRAG",
-      tags: ["知识库构建", "向量检索", "GraphRAG", "后端控制台"],
+      name: "动力装备领域 RAG/GraphRAG 智能知识问答系统",
+      type: "核心开发 / 方案设计与全链路落地",
+      tags: ["RAG / GraphRAG", "混合检索", "知识图谱", "FastAPI / Chroma"],
       points: [
-        "搭建上传、入库、检索、benchmark、日志查看控制台，用 FastAPI / Chroma 管理文档切片、索引和运行数据。",
-        "围绕 6098 页动力装备资料完成可审计处理，沉淀 593 条 chunk，推进普通 RAG 到 GraphRAG 与知识图谱构建的前置实验。"
+        "面向燃气轮机、风电设备等动力装备资料查阅难、问答无依据的问题，搭建本地化、可溯源的智能知识问答系统。",
+        "负责文档解析/OCR 清洗、智能分块、向量入库、FastAPI 检索接口、GraphRAG 图谱能力、自动化评测与 Web 控制台落地；围绕 6098 页资料沉淀 593 条 chunk。"
       ],
       links: [
         { label: "在线演示", url: "https://javonloong.github.io/RAG/" },
@@ -121,7 +121,7 @@ window.resumeData = {
       period: "2025.05 - 至今",
       points: [
         "参与接待玻利维亚驻华大使 Hugo Siles，统筹策划示范烹饪活动，通过地域美食文化促进中外交流。",
-        "提议并落地多项特色活动方案，提升社团成员活跃度。"
+        "优化活动议程、物资清单、现场分工与会员共创机制，推动主题烹饪和交流活动稳定落地。"
       ]
     }
   ],
