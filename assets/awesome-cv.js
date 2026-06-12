@@ -120,7 +120,8 @@
           <a href="#projects">项目</a>
           <a href="#experience">经历</a>
           <a href="#awards">奖项</a>
-          <a href="resume/javon-formal-cv.pdf">PDF</a>
+          <a href="resume/javon-formal-cv-cn.pdf">中文 PDF</a>
+          <a href="resume/javon-formal-cv.pdf">English PDF</a>
         </nav>
       </header>
 
@@ -132,7 +133,8 @@
           <div class="actions">
             <a class="button-link primary" href="#projects">查看项目证据</a>
             <a class="button-link" href="mailto:${esc(person.email)}">联系邮箱</a>
-            <a class="button-link" href="resume/javon-formal-cv.pdf">PDF 简历</a>
+            <a class="button-link" href="resume/javon-formal-cv-cn.pdf">中文 PDF</a>
+            <a class="button-link" href="resume/javon-formal-cv.pdf">English PDF</a>
           </div>
         </div>
         <aside class="hero-side">

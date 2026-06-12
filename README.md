@@ -9,9 +9,13 @@
   ·
   <a href="cv.html">正式 CV</a>
   ·
-  <a href="resume/javon-formal-cv.pdf">PDF 简历</a>
+  <a href="resume/javon-formal-cv-cn.pdf">中文 PDF</a>
   ·
-  <a href="resume/javon-formal-cv.tex">LaTeX 源码</a>
+  <a href="resume/javon-formal-cv.pdf">English PDF</a>
+  ·
+  <a href="resume/javon-formal-cv-cn.tex">中文 LaTeX</a>
+  ·
+  <a href="resume/javon-formal-cv.tex">English LaTeX</a>
   ·
   <a href="https://github.com/JavonLoong">GitHub</a>
   ·
@@ -58,8 +62,11 @@
 - `cv.html`：与根页面相同的 Figma 风格正式 CV 页面。
 - `assets/profile-preview.svg`：README 头图。
 - `assets/resume-data.js`：网页简历共用的结构化履历数据。
-- `resume/javon-formal-cv.pdf`：基于 `moderncv` 的 A4 两页正式 PDF CV。
-- `resume/javon-formal-cv.tex`：基于 `moderncv` 官方模板改写的可编辑 LaTeX CV 源码。
+- `resume/javon-formal-cv-cn.pdf`：基于 `moderncv` 的中文 A4 两页正式 PDF CV，右上角预留照片位置。
+- `resume/javon-formal-cv-cn.tex`：中文 PDF CV 的可编辑 LaTeX 源码。
+- `resume/javon-formal-cv.pdf`：基于 `moderncv` 的英文 A4 两页正式 PDF CV，右上角预留照片位置。
+- `resume/javon-formal-cv.tex`：基于 `moderncv` 官方模板改写的英文 LaTeX CV 源码。
+- `resume/profile-photo-placeholder.pdf`：照片占位文件；替换为真实证件照时，可保持文件名不变并重新编译 CV。
 
 ## 内容参考
 

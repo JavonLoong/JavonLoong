@@ -403,7 +403,7 @@ h2 {
 
 .experience-card {
   display: grid;
-  grid-template-columns: 170px minmax(0, 1fr);
+  grid-template-columns: minmax(190px, 0.24fr) minmax(0, 1fr);
   gap: 20px;
 }
 

@@ -1,0 +1,11 @@
+\documentclass[tikz,border=0pt]{standalone}
+\usepackage{fontspec}
+\setmainfont{Arial}
+\begin{document}
+\begin{tikzpicture}[x=1pt,y=1pt]
+  \draw[draw=black!35,line width=0.6pt] (0,0) rectangle (86,110);
+  \draw[draw=black!25,line width=0.4pt] (12,82) circle (16);
+  \draw[draw=black!25,line width=0.4pt] (18,28) .. controls (32,54) and (54,54) .. (68,28);
+  \node[align=center,text=black!45,font=\fontsize{8}{9}\selectfont] at (43,12) {PHOTO};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,100 @@
+%% Based on the official moderncv template:
+%% Copyright 2006-2015 Xavier Danaux, 2020-2024 moderncv maintainers.
+%% Distributed under the LaTeX Project Public License version 1.3c.
+
+\documentclass[10pt,a4paper,sans]{moderncv}
+
+\moderncvstyle{classic}
+\moderncvcolor{black}
+
+\usepackage[left=15mm,right=15mm,top=14mm,bottom=14mm]{geometry}
+\setlength{\hintscolumnwidth}{28mm}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setCJKmainfont[BoldFont={Microsoft YaHei},ItalicFont={SimSun}]{SimSun}
+\setCJKsansfont{Microsoft YaHei}
+
+\name{纪文龙}{}
+\title{个人简历 · JavonLoong}
+\phone[mobile]{16639250335}
+\email{jwl24@mails.tsinghua.edu.cn}
+\homepage{javonloong.github.io/JavonLoong}
+\social[github]{JavonLoong}
+\photo[72pt][0.4pt]{profile-photo-placeholder}
+
+\begin{document}
+\makecvtitle
+
+\section{个人概况}
+\cvitem{}{清华大学行健书院本科生，修读理论与应用力学 + 能源与动力工程双学位，预计 2028 年 7 月毕业。关注 AI 应用工程、RAG / GraphRAG、工程仿真复刻、产品原型、3D 参数化建模与视觉表达。}
+
+\section{教育背景}
+\cventry{2024.09--2028.07}{本科生}{清华大学，行健书院}{北京}{预计毕业}{理论与应用力学 + 能源与动力工程双学位；已修读课程 24 门，其中必修课 17 门。}
+
+\section{核心能力}
+\cvitem{AI 应用工程}{RAG / GraphRAG 预研、知识库构建、向量检索、后端控制台、任务拆解与工程化验证。}
+\cvitem{工程仿真}{COMSOL 建模、Python 数值仿真、工程结果复刻、参数化实验与结果验证。}
+\cvitem{产品原型}{需求拆解、交互流程、Agent 原型、AIGC 3D 生成、PPT 叙事与视觉表达。}
+\cvitem{协作方法}{工具优先、上下文工程、多 agent 协作、人工审核、阶段性验收与复盘。}
+
+\section{项目经历}
+\cventry{RAG / GraphRAG}{动力装备知识库控制台}{FastAPI, Chroma, 向量检索}{}{}{
+\begin{itemize}
+  \item 搭建上传、入库、检索、benchmark、日志查看控制台，用 FastAPI / Chroma 管理文档 chunk、索引和运行数据。
+  \item 围绕 6098 页动力装备资料完成可审计处理，沉淀 593 条 chunk，用于 RAG / GraphRAG 前置实验。
+  \item 在线演示：\httplink{javonloong.github.io/RAG}；源码：\httplink{github.com/JavonLoong/RAG}。
+\end{itemize}}
+
+\cventry{工程仿真}{高空风能 AWES 与 COMSOL 仿真复刻}{COMSOL, Python, 数值验证}{}{}{
+\begin{itemize}
+  \item 复刻典型飞行轨迹、系留绳张力、功率曲线和 pumping-cycle 能量账本。
+  \item 将 COMSOL 气动极线接入 Python 主仿真，并组织 42-case 复核材料。
+\end{itemize}}
+
+\cventry{AI Agent / AIGC}{智能电子产品创新实践课程项目}{Agent 原型, 交互流程, 3D 生成}{}{}{
+\begin{itemize}
+  \item 基于科大讯飞星辰平台完成 Agent 创意设计、需求拆解、交互流程和功能原型。
+  \item 使用腾讯混元 3D 完成模型生成与优化，获得 Agent 设计和 3D 模型设计课程奖励。
+\end{itemize}}
+
+\cventry{视觉表达}{美育图像与 PPT 制作}{图像生成, 版式控制, 汇报叙事}{}{}{
+\begin{itemize}
+  \item 完成素材筛选、图像风格控制、页面重绘和最终汇报材料交付。
+  \item 重点关注审美判断、信息层级、版式稳定和可复盘交付物。
+\end{itemize}}
+
+\cventry{3D 参数化}{MoonCake Studio 月饼模具设计器}{Three.js, 实时预览, STL / GLB 导出}{}{}{
+\begin{itemize}
+  \item 实现浏览器端 3D 月饼模具自定义工具，支持边缘轮廓、传统花纹、中文刻字、图片浮雕和双视图预览。
+  \item 支持 STL / GLB 导出，覆盖 3D 建模、交互设计和面向生产文件的输出。
+  \item 在线演示：\httplink{javonloong.github.io/Mooncake-Modle}；源码：\httplink{github.com/JavonLoong/Mooncake-Modle}。
+\end{itemize}}
+
+\section{领导力与公共实践}
+\cventry{2025.05--至今}{副会长}{清华大学知食者协会}{}{}{
+\begin{itemize}
+  \item 参与接待玻利维亚驻华大使 Hugo Siles，协调示范烹饪活动，促进中外文化交流。
+  \item 提议并落地多项特色活动方案，提升社团成员参与度。
+\end{itemize}}
+
+\cventry{2025}{活动参与与后勤负责人}{行健书院活动与“哈国健行”海外实践}{}{}{
+\begin{itemize}
+  \item 参与学生节道具组、滑冰俱乐部新生教学和集体锻炼组织。
+  \item 赴哈萨克斯坦海外实践期间，负责英文会议记录、SDG 问卷发放与数据回收、保险报销、交通调度和应急后勤。
+\end{itemize}}
+
+\cventry{2024--2025}{志愿者、讲解员与助教}{校园服务与教学表达}{}{}{
+\begin{itemize}
+  \item 参与高考招生志愿服务、校园讲解、“情系母校”回访、鸿雁计划训练营及大型展会志愿服务。
+  \item 辅导学生数学、物理、语文及全科复盘，强调把复杂内容拆解成清晰表达。
+\end{itemize}}
+
+\section{荣誉奖项}
+\cvitem{奖学金}{清华大学强基计划自主招生 A+ 评级；2024 年海昌智能奖学金一等奖；2024 年读书郎圆梦奖学金；2025 年国家励志奖学金；2025 年清华大学志愿公益奖学金。}
+\cvitem{竞赛}{北京市第三十六届大学生数学竞赛三等奖；2025 年全国大学生数学竞赛北京赛区三等奖；清华大学 2025--2026 学年度理论力学竞赛三等奖。}
+\cvitem{创新}{科大讯飞星辰 Agent 设计优秀创意二等奖；腾讯混元 3D 模型设计优秀创意一等奖；清华大学行健书院“五行杯”最具可行性奖。}
+\cvitem{其他}{2024 级本科生军训先进个人；2021--2022 学年鹤壁市高中校级特优生；2022 年鹤壁市“三好学生”；2023 年全国中学生数学、物理、生物竞赛河南赛区二等奖，化学竞赛三等奖。}
+
+\end{document}
