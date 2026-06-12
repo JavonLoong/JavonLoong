@@ -5,7 +5,6 @@ window.resumeData = {
     title: "清华大学行健书院大二本科生",
     program: "理论与应用力学 + 能源与动力工程双学位",
     period: "2024.09 - 2028.07（预计）",
-    coursework: "已修读课程 24 门，其中必修课 17 门",
     contact: "16639250335",
     email: "jwl24@mails.tsinghua.edu.cn",
     positioning: "AI 应用工程、工程仿真复刻、产品原型与视觉表达",
