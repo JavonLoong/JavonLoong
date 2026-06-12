@@ -58,8 +58,8 @@
 - `cv.html`：与根页面相同的 Figma 风格正式 CV 页面。
 - `assets/profile-preview.svg`：README 头图。
 - `assets/resume-data.js`：网页简历共用的结构化履历数据。
-- `resume/javon-formal-cv.pdf`：A4 两页正式 PDF CV。
-- `resume/javon-formal-cv.tex`：可编辑 LaTeX CV 源码。
+- `resume/javon-formal-cv.pdf`：基于 `moderncv` 的 A4 两页正式 PDF CV。
+- `resume/javon-formal-cv.tex`：基于 `moderncv` 官方模板改写的可编辑 LaTeX CV 源码。
 
 ## 内容参考
 

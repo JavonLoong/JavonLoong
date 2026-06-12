@@ -1,157 +1,99 @@
-\documentclass[UTF8,zihao=false]{ctexart}
+%% Based on the official moderncv template:
+%% Copyright 2006-2015 Xavier Danaux, 2020-2024 moderncv maintainers.
+%% Distributed under the LaTeX Project Public License version 1.3c.
 
-\usepackage[a4paper,top=16mm,bottom=16mm,left=17mm,right=17mm]{geometry}
+\documentclass[10pt,a4paper,sans]{moderncv}
+
+\moderncvstyle{classic}
+\moderncvcolor{black}
+
+\usepackage[left=15mm,right=15mm,top=14mm,bottom=14mm]{geometry}
+\setlength{\hintscolumnwidth}{28mm}
 \usepackage{fontspec}
-\usepackage{xcolor}
-\usepackage{tabularx}
-\usepackage{array}
-\usepackage{enumitem}
-\usepackage{hyperref}
-\usepackage{titlesec}
-
-\pagestyle{empty}
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{0pt}
-\setCJKmainfont[BoldFont={Microsoft YaHei}]{SimSun}
-\setCJKsansfont{Microsoft YaHei}
+\usepackage{xeCJK}
 \setmainfont{Times New Roman}
 \setsansfont{Arial}
+\setCJKmainfont[BoldFont={Microsoft YaHei}]{SimSun}
+\setCJKsansfont{Microsoft YaHei}
 
-\definecolor{ink}{HTML}{111111}
-\definecolor{muted}{HTML}{555555}
-\definecolor{line}{HTML}{B8B8B8}
-\hypersetup{
-  colorlinks=true,
-  urlcolor=ink,
-  linkcolor=ink
-}
-
-\color{ink}
-\renewcommand{\arraystretch}{1.12}
-\setlist[itemize]{
-  leftmargin=1.25em,
-  topsep=2pt,
-  partopsep=0pt,
-  parsep=0pt,
-  itemsep=1pt
-}
-
-\newcommand{\cvsection}[1]{%
-  \vspace{8pt}
-  {\sffamily\bfseries\fontsize{11.2pt}{13pt}\selectfont #1}\par
-  \vspace{-2pt}
-  \textcolor{line}{\rule{\linewidth}{0.45pt}}
-  \vspace{2pt}
-}
-
-\newcommand{\entry}[4]{%
-  {\bfseries #1}\hfill{\color{muted}#2}\par
-  {\color{muted}#3}\par
-  #4
-}
-
-\newcommand{\project}[5]{%
-  {\bfseries #1}\hfill{\color{muted}#2}\par
-  {\color{muted}#3}\par
-  #4
-  \ifx&#5&\else{\small\color{muted}#5}\par\fi
-}
+\name{JavonLoong}{纪文龙}
+\title{Curriculum Vitae}
+\phone[mobile]{16639250335}
+\email{jwl24@mails.tsinghua.edu.cn}
+\homepage{javonloong.github.io/JavonLoong}
+\social[github]{JavonLoong}
 
 \begin{document}
+\makecvtitle
 
-\begin{center}
-  {\sffamily\bfseries\fontsize{24pt}{28pt}\selectfont 纪文龙}\\[-1pt]
-  {\fontsize{10.5pt}{12.5pt}\selectfont JavonLoong}\\[4pt]
-  {\small
-  电话：16639250335 \quad
-  邮箱：\href{mailto:jwl24@mails.tsinghua.edu.cn}{jwl24@mails.tsinghua.edu.cn} \quad
-  GitHub：\href{https://github.com/JavonLoong}{github.com/JavonLoong}
-  }\\[-1pt]
-  {\small
-  主页：\href{https://javonloong.github.io/JavonLoong/}{javonloong.github.io/JavonLoong}
-  }
-\end{center}
+\section{Profile}
+\cvitem{}{Undergraduate student at Xingjian College, Tsinghua University, pursuing a dual-degree track in Theoretical and Applied Mechanics and Energy and Power Engineering. Expected graduation: July 2028. Focus areas include AI application engineering, RAG / GraphRAG, engineering simulation, product prototyping, and 3D parametric modeling.}
 
-\cvsection{个人概况}
-清华大学行健书院本科生，修读理论与应用力学 + 能源与动力工程双学位，预计 2028 年 7 月毕业。关注 AI 应用工程、RAG / GraphRAG、工程仿真复刻、产品原型、3D 参数化建模与视觉表达。习惯将 AI 作为工程协作系统使用：先确认资料、边界与可复用工具，再通过计划拆解、子 agent 实现、主 agent 审核和阶段性验证推进到可解释交付。
+\section{Education}
+\cventry{2024.09--2028.07}{B.Eng. candidate}{Tsinghua University, Xingjian College}{Beijing}{Expected}{Dual-degree track: Theoretical and Applied Mechanics + Energy and Power Engineering. Completed 24 courses, including 17 required courses.}
 
-\cvsection{教育背景}
-\entry{清华大学，行健书院，本科生}{2024.09 -- 2028.07 预计}{理论与应用力学 + 能源与动力工程双学位；已修读课程 24 门，其中必修课 17 门。}{}
+\section{Skills}
+\cvitem{AI engineering}{RAG / GraphRAG exploration, knowledge-base construction, vector search, backend control panels, and engineering validation.}
+\cvitem{Simulation}{COMSOL modeling, Python numerical simulation, engineering-result reproduction, and parametric experiments.}
+\cvitem{Product}{Requirement analysis, interaction flows, agent prototyping, AIGC 3D generation, and presentation narrative.}
+\cvitem{Workflow}{Tool-first research, context engineering, multi-agent collaboration, human review, and staged verification.}
 
-\cvsection{核心能力}
-\begin{tabularx}{\linewidth}{@{}>{\bfseries}p{27mm}X@{}}
-AI 应用工程 & RAG / GraphRAG 预研、知识库构建、向量检索、后端控制台、任务拆解与工程化验证。\\
-工程仿真 & COMSOL 建模、Python 数值仿真、工程结果复刻、参数化实验与汇报材料整理。\\
-产品与表达 & 需求拆解、交互流程、Agent 原型、AIGC 3D 模型生成、PPT 叙事与视觉表达。\\
-协作方法 & 工具优先、上下文工程、多 agent 协作、人工审核、阶段性验收与复盘。\\
-\end{tabularx}
-
-\cvsection{项目经历}
-\project{动力装备知识库控制台}{RAG 与 GraphRAG}{FastAPI / Chroma / 知识库构建 / 向量检索}{
+\section{Selected Projects}
+\cventry{RAG / GraphRAG}{Power-equipment knowledge-base console}{FastAPI, Chroma, vector search}{}{}{
 \begin{itemize}
-  \item 搭建上传、入库、检索、benchmark、日志查看控制台，用 FastAPI / Chroma 管理文档切片、索引和运行数据。
-  \item 围绕 6098 页动力装备资料完成可审计处理，沉淀 593 条 chunk，推进普通 RAG 到 GraphRAG 与知识图谱构建的前置实验。
-\end{itemize}
-}{在线演示：\href{https://javonloong.github.io/RAG/}{javonloong.github.io/RAG}；源码：\href{https://github.com/JavonLoong/RAG}{github.com/JavonLoong/RAG}}
+  \item Built a console for upload, ingestion, retrieval, benchmark, and log review, using FastAPI and Chroma to manage chunks, indexes, and runtime data.
+  \item Processed 6,098 pages of power-equipment materials into an auditable pipeline and generated 593 chunks for RAG / GraphRAG experiments.
+  \item Demo: \httplink{javonloong.github.io/RAG}; Source: \httplink{github.com/JavonLoong/RAG}.
+\end{itemize}}
 
-\project{高空风能 AWES 与 COMSOL 仿真复刻}{工程仿真}{COMSOL / Python / 数值计算 / 结果验证}{
+\cventry{Simulation}{High-altitude wind-energy AWES and COMSOL reproduction}{COMSOL, Python, numerical validation}{}{}{
 \begin{itemize}
-  \item 复刻典型飞行轨迹、系留绳张力、功率曲线和 pumping-cycle 能量账本，将 COMSOL 气动极线接入 Python 主仿真。
-  \item 搭建 42-case 软件闭环和汇报材料，保留 COMSOL 与 Python 各自承担的证据边界，避免把不同层级证据混作完整物理求解。
-\end{itemize}
-}{}
+  \item Reproduced representative flight trajectories, tether tension, power curves, and pumping-cycle energy accounting.
+  \item Connected COMSOL aerodynamic polar data to a Python main simulation and organized a 42-case review loop.
+\end{itemize}}
 
-\project{智能电子产品创新实践课程项目}{AI Agent 与 AIGC 设计}{需求拆解 / 交互流程 / Agent 原型 / 3D 生成}{
+\cventry{AI Agent / AIGC}{Smart electronic-product innovation course project}{Agent prototype, interaction flow, 3D generation}{}{}{
 \begin{itemize}
-  \item 基于科大讯飞星辰平台完成 Agent 创意设计，负责需求拆解、交互流程设计与功能原型搭建，获优秀创意二等奖。
-  \item 使用腾讯混元 3D 完成模型生成与设计优化，参与提示词设计、模型效果筛选与展示方案制作，获优秀创意一等奖。
-\end{itemize}
-}{复盘视频：\href{https://v.douyin.com/Bx2r1kX1LPo/}{v.douyin.com/Bx2r1kX1LPo}}
+  \item Completed agent concept design, requirement decomposition, interaction-flow design, and functional prototyping on the iFLYTEK Xingchen platform.
+  \item Used Tencent Hunyuan 3D for model generation and refinement; received course awards for Agent design and 3D model design.
+\end{itemize}}
 
-\project{美育图像与 PPT 制作}{视觉表达}{图像生成 / 版式控制 / PPT 叙事 / 风格一致性}{
+\cventry{Visual communication}{Aesthetic-education image and presentation production}{Image generation, layout control, presentation narrative}{}{}{
 \begin{itemize}
-  \item 以美育、薪火计划、回声计划等主题为样本，完成从素材筛选、图像风格、页面重绘到汇报 PPT 成稿的整理。
-  \item 重点体现审美判断、信息层级和版式稳定，强调交付物可直接打开查看与复盘。
-\end{itemize}
-}{}
+  \item Produced presentation materials covering asset selection, image style, page redraw, and final delivery.
+  \item Focused on visual judgment, information hierarchy, layout stability, and reviewable deliverables.
+\end{itemize}}
 
-\newpage
-
-\project{MoonCake Studio 月饼模具设计器}{3D 参数化}{Three.js / 实时预览 / STL / GLB 导出}{
+\cventry{3D parametric modeling}{MoonCake Studio mooncake-mold designer}{Three.js, real-time preview, STL / GLB export}{}{}{
 \begin{itemize}
-  \item 实现浏览器端 3D 月饼模具自定义工具，支持边缘轮廓、传统花纹、中文刻字、图片浮雕和双视图预览。
-  \item 支持 STL / GLB 导出，体现基础 3D 建模、交互设计和面向生产文件的工程意识。
-\end{itemize}
-}{在线演示：\href{https://javonloong.github.io/Mooncake-Modle/}{javonloong.github.io/Mooncake-Modle}；源码：\href{https://github.com/JavonLoong/Mooncake-Modle}{github.com/JavonLoong/Mooncake-Modle}}
+  \item Implemented a browser-based 3D mooncake-mold customization tool with edge profiles, patterns, Chinese engraving, image relief, and dual-view preview.
+  \item Supported STL / GLB export, covering 3D modeling, interaction design, and production-oriented file output.
+  \item Demo: \httplink{javonloong.github.io/Mooncake-Modle}; Source: \httplink{github.com/JavonLoong/Mooncake-Modle}.
+\end{itemize}}
 
-\cvsection{领导力与公共实践}
-\entry{清华大学知食者协会副会长}{2025.05 -- 至今}{社团组织 / 中外交流 / 活动策划}{
+\section{Leadership and Public Service}
+\cventry{2025.05--Present}{Vice President}{Tsinghua University Zhi Shi Zhe Association}{}{}{
 \begin{itemize}
-  \item 参与接待玻利维亚驻华大使 Hugo Siles，统筹策划示范烹饪活动，通过地域美食文化促进中外交流。
-  \item 提议并落地多项特色活动方案，提升社团成员活跃度。
-\end{itemize}
-}
+  \item Helped host Bolivian Ambassador to China Hugo Siles and coordinated a demonstration-cooking event for cross-cultural exchange.
+  \item Proposed and implemented activity plans to improve member engagement.
+\end{itemize}}
 
-\entry{行健书院活动参与与“哈国健行”海外实践}{2025}{活动参与 / 后勤负责人}{
+\cventry{2025}{Participant and logistics lead}{Xingjian College activities and ``Ha-Guo Jian-Xing'' overseas practice}{}{}{
 \begin{itemize}
-  \item 参与书院学生节道具组、滑冰俱乐部新生教学与集体锻炼组织；赴哈萨克斯坦海外实践，负责英文会议记录、青年 SDG 问卷发放与数据回收分析。
-  \item 处理团队海外保险报销、异国交通调度及应急事务。
-\end{itemize}
-}
+  \item Participated in student-festival prop work, skating-club teaching, and collective training organization.
+  \item During the Kazakhstan overseas practice, handled English meeting notes, SDG questionnaire distribution, data collection, insurance reimbursement, transport coordination, and urgent logistics.
+\end{itemize}}
 
-\entry{志愿公益、公众讲解与教学表达}{2024 -- 2025}{五星级紫荆志愿者 / 讲师 / 全科助教}{
+\cventry{2024--2025}{Volunteer, public speaker, and tutor}{Campus service and teaching}{}{}{
 \begin{itemize}
-  \item 参与高考招生志愿服务、校园讲解、“情系母校”回访、鸿雁计划训练营及大型展会志愿服务，承担讲解、咨询、现场协作与活动执行。
-  \item 有多段家教和辅导班经历，曾辅导初高中学生数学、物理、语文及全科复盘，擅长把复杂内容拆解成清晰表达。
-\end{itemize}
-}
+  \item Served in admissions volunteering, campus guiding, ``Return to Alma Mater'' visits, Hongyan training-camp service, and large exhibition volunteering.
+  \item Tutored students in mathematics, physics, Chinese, and full-subject review, emphasizing clear decomposition of complex material.
+\end{itemize}}
 
-\cvsection{荣誉奖项}
-\begin{itemize}
-  \item 清华大学强基计划自主招生 A+ 评级；2024 年海昌智能奖学金一等奖；2024 年读书郎圆梦奖学金；2025 年国家励志奖学金；2025 年清华大学志愿公益奖学金。
-  \item 北京市第三十六届大学生数学竞赛（非数学专业甲组）三等奖；2025 年全国大学生数学竞赛（北京赛区）三等奖；清华大学 2025-2026 学年度理论力学竞赛三等奖。
-  \item 科大讯飞星辰 Agent 设计奖励优秀创意二等奖；腾讯混元 3D 模型设计奖励优秀创意一等奖；清华大学行健书院“五行杯”最具可行性奖。
-  \item 2024 级本科生军训先进个人；2021-2022 学年鹤壁市高中校级特优生；2022 年鹤壁市“三好学生”；2023 年全国中学生数学、物理、生物竞赛河南赛区二等奖，化学竞赛三等奖。
-\end{itemize}
+\section{Honors and Awards}
+\cvitem{Scholarships}{Tsinghua University Strong Foundation Plan A+ rating; 2024 Haichang Intelligent Scholarship First Prize; 2024 Dushulang Yuanmeng Scholarship; 2025 National Inspirational Scholarship; 2025 Tsinghua University Volunteer Public Welfare Scholarship.}
+\cvitem{Competitions}{Third Prize, Beijing 36th Undergraduate Mathematics Competition; Third Prize, 2025 Chinese Mathematics Competition for College Students, Beijing Division; Third Prize, 2025--2026 Tsinghua Theoretical Mechanics Competition.}
+\cvitem{Innovation}{iFLYTEK Xingchen Agent Design Excellent Creativity Second Prize; Tencent Hunyuan 3D Model Design Excellent Creativity First Prize; Tsinghua Xingjian College ``Wuxing Cup'' Most Feasible Award.}
+\cvitem{Other}{2024 undergraduate military-training advanced individual; 2021--2022 Hebi Senior High School outstanding student; 2022 Hebi ``Three-Good Student''; 2023 provincial second prizes in mathematics, physics, and biology competitions, and third prize in chemistry competition.}
 
 \end{document}
