@@ -7,7 +7,7 @@ window.resumeData = {
     period: "2024.09 - 2028.07（预计）",
     contact: "16639250335",
     email: "jwl24@mails.tsinghua.edu.cn",
-    positioning: "AI 应用工程、工程仿真复刻、产品原型与视觉表达",
+    positioning: "AI 应用工程、工程仿真复刻、游戏模组定制、产品原型与视觉表达",
     statement:
       "我把 AI 当成工程协作系统：先确认资料、边界与可复用工具，再用收敛的 plan、子 agent 实现、主 agent 审核和阶段性验证，把任务推进到可解释的交付。"
   },
@@ -95,6 +95,15 @@ window.resumeData = {
       links: [
         { label: "在线演示", url: "https://javonloong.github.io/Mooncake-Modle/" },
         { label: "源码仓库", url: "https://github.com/JavonLoong/Mooncake-Modle" }
+      ]
+    },
+    {
+      name: "游戏模组定制与版本适配实践",
+      type: "Mod 工程 / 资源适配",
+      tags: ["RimWorld / Harmony", "Minecraft NeoForge", "资源结构梳理", "测试交付"],
+      points: [
+        "围绕 RimWorld、Minecraft 与 RE Engine 资源包等场景，完成模组需求拆解、资源结构梳理、版本适配、行为逻辑改写和交付包整理。",
+        "实现 RimWorld 动物“保持发呆”模组：通过 Harmony Patch、XML Patch、C# 策略层和测试用例处理行为拦截、安全例外、开关持久化与 1.5/1.6 兼容。"
       ]
     }
   ],
