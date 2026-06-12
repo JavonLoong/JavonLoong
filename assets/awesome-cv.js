@@ -1,72 +1,17 @@
 (function () {
   "use strict";
 
-  const variants = {
-    vercel: {
-      name: "Vercel",
-      title: "Build, verify, and ship readable work.",
-      lens: "Developer profile / delivery log",
-      source: "Black-white precision, hairline systems, restrained AI-cloud energy.",
-      command: "npx getdesign@latest add vercel",
-      accent: "AI engineering CV"
-    },
-    linear: {
-      name: "Linear",
-      title: "A career roadmap for AI-assisted engineering.",
-      lens: "Issue tracker / roadmap",
-      source: "Dark operational surface, compact rows, lavender action color.",
-      command: "npx getdesign@latest add linear.app",
-      accent: "Roadmap CV"
-    },
-    replicate: {
-      name: "Replicate",
-      title: "An AI lab notebook for projects that produce evidence.",
-      lens: "Model gallery / lab notes",
-      source: "Warm cream canvas, orange stamp, model-card rhythm.",
-      command: "npx getdesign@latest add replicate",
-      accent: "Lab CV"
-    },
-    cursor: {
-      name: "Cursor",
-      title: "How I use AI to read, edit, test, and deliver.",
-      lens: "AI coding notebook",
-      source: "Light IDE surface, warm editor chrome, orange command accents.",
-      command: "npx getdesign@latest add cursor",
-      accent: "Agent workflow CV"
-    },
-    notion: {
-      name: "Notion",
-      title: "A personal knowledge base for public practice and engineering.",
-      lens: "Readable database CV",
-      source: "Warm minimal document surface, property rows, database cards.",
-      command: "npx getdesign@latest add notion",
-      accent: "Knowledge-base CV"
-    },
-    wired: {
-      name: "WIRED",
-      title: "A public-practice profile with engineering receipts.",
-      lens: "Editorial profile",
-      source: "Paper-white magazine density, strong serif headlines, blue links.",
-      command: "npx getdesign@latest add wired",
-      accent: "Editorial CV"
-    },
-    figma: {
-      name: "Figma",
-      title: "A canvas of cases, systems, and visible proof.",
-      lens: "Portfolio canvas",
-      source: "Black frame, color blocks, case-study tiles, design-system evidence.",
-      command: "npx getdesign@latest add figma",
-      accent: "Case-study CV"
-    }
+  const variant = {
+    name: "Figma",
+    title: "A canvas of cases, systems, and visible proof.",
+    lens: "Portfolio canvas",
+    source: "Black frame, color blocks, case-study tiles, design-system evidence.",
+    command: "npx getdesign@latest add figma",
+    accent: "Case-study CV"
   };
 
-  const key = window.awesomeCvVariant || document.body.dataset.variant || "vercel";
-  const variant = variants[key] || variants.vercel;
   const data = window.resumeData || {};
   const person = data.person || {};
-  const isNested = location.pathname.includes("/variants/");
-  const isFormalCv = !isNested && /\/cv\.html$/i.test(location.pathname);
-  const rootPath = isNested ? "../" : "";
 
   const esc = (value) => String(value || "").replace(/[&<>"']/g, (char) => ({
     "&": "&amp;",
@@ -79,7 +24,6 @@
   const path = (href) => {
     if (!href) return href;
     if (/^https?:\/\//.test(href)) return href;
-    if (isNested) return href;
     return href.replace(/^\.\.\//, "");
   };
 
@@ -127,7 +71,7 @@
         <h3>${esc(project.name)}</h3>
         <span class="project-type">${esc(project.type)}</span>
       </div>
-      <ul>${list(project.points, key === "wired" ? 1 : 2)}</ul>
+      <ul>${list(project.points, 2)}</ul>
       <div class="tags">${(project.tags || []).map((tag) => `<span class="chip">${esc(tag)}</span>`).join("")}</div>
       ${(project.links || []).length ? `<div class="project-links">${project.links.map((link) => `<a href="${esc(path(link.url))}" target="_blank" rel="noreferrer">${esc(linkLabel(link.label))}</a>`).join("")}</div>` : ""}
     </article>
@@ -144,7 +88,7 @@
   const awards = () => awardGroups().map(([title, items]) => `
     <article class="award-card">
       <h3>${esc(title)}</h3>
-      <ul>${list(items, key === "notion" ? 6 : 5)}</ul>
+      <ul>${list(items, 5)}</ul>
     </article>
   `).join("");
 
@@ -156,7 +100,7 @@
       </div>
       <div>
         <h3>${esc(item.title)}</h3>
-        <ul>${list(item.points, key === "wired" ? 2 : 3)}</ul>
+        <ul>${list(item.points, 3)}</ul>
       </div>
     </article>
   `).join("");
@@ -167,16 +111,16 @@
   app.innerHTML = `
     <main class="cv-shell">
       <header class="cv-nav">
-        <a class="cv-brand" href="${rootPath}index.html">
+        <a class="cv-brand" href="index.html">
           <strong>${esc(person.name)} · ${esc(person.roman)}</strong>
-          <span>${isFormalCv ? "Formal online CV" : `${esc(variant.name)} inspired CV option`}</span>
+          <span>Figma style formal CV</span>
         </a>
         <nav class="nav-links" aria-label="页面导航">
           <a href="#method">方法</a>
           <a href="#projects">项目</a>
           <a href="#experience">经历</a>
-          <a href="${rootPath}cv.html">正式 CV</a>
-          <a href="${rootPath}index.html">主页</a>
+          <a href="#awards">奖项</a>
+          <a href="resume/javon-formal-cv.pdf">PDF</a>
         </nav>
       </header>
 
@@ -188,7 +132,7 @@
           <div class="actions">
             <a class="button-link primary" href="#projects">查看项目证据</a>
             <a class="button-link" href="mailto:${esc(person.email)}">联系邮箱</a>
-            <a class="button-link" href="${isNested ? "../resume/javon-formal-cv.pdf" : "resume/javon-formal-cv.pdf"}">PDF 简历</a>
+            <a class="button-link" href="resume/javon-formal-cv.pdf">PDF 简历</a>
           </div>
         </div>
         <aside class="hero-side">
@@ -250,7 +194,7 @@
         <div class="award-grid">${awards()}</div>
       </section>
 
-      <p class="footer-note">${isFormalCv ? `Formal online CV using the selected ${esc(variant.name)}-inspired direction.` : `Style exploration for ${esc(person.name)}. The selected formal CV is available at <a href="${rootPath}cv.html">cv.html</a>.`}</p>
+      <p class="footer-note">Formal online CV using the selected ${esc(variant.name)}-inspired direction.</p>
     </main>
   `;
 }());

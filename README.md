@@ -47,15 +47,15 @@
 
 ## 正式线上 CV
 
-当前 GitHub Pages 只展示 Figma 风格正式 CV：[打开](cv.html)。
+当前 GitHub Pages 的根页面和 `cv.html` 都只展示同一套 Figma 风格正式 CV：[打开](https://javonloong.github.io/JavonLoong/)。
 
-其他设计候选保留在本地备份目录，不随 GitHub Pages 发布。
+线上不保留其他风格入口或候选样式代码。
 
 ## 仓库内容
 
-- `index.html`：可视化个人主页，适合 GitHub Pages。
+- `index.html`：Figma 风格正式 CV 根页面，适合 GitHub Pages。
 - `README.md`：GitHub Profile README。
-- `cv.html`：Figma 风格独立正式 CV 页面。
+- `cv.html`：与根页面相同的 Figma 风格正式 CV 页面。
 - `assets/profile-preview.svg`：README 头图。
 - `assets/resume-data.js`：网页简历共用的结构化履历数据。
 - `resume/javon-formal-cv.pdf`：A4 两页正式 PDF CV。

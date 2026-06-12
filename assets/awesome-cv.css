@@ -1,16 +1,16 @@
 :root {
-  --bg: #ffffff;
+  --bg: #f5f5f2;
   --surface: #ffffff;
-  --surface-2: #f7f7f7;
-  --ink: #171717;
-  --muted: #666666;
-  --quiet: #949494;
-  --line: #e5e5e5;
-  --accent: #2563eb;
-  --accent-2: #7c3aed;
-  --accent-soft: rgba(37, 99, 235, 0.1);
-  --shadow: 0 18px 60px rgba(0, 0, 0, 0.08);
-  --radius: 8px;
+  --surface-2: #f3ede1;
+  --ink: #161616;
+  --muted: #595959;
+  --quiet: #8c8c8c;
+  --line: #1f1f1f;
+  --accent: #7b61ff;
+  --accent-2: #00a879;
+  --accent-soft: rgba(123, 97, 255, 0.12);
+  --shadow: 8px 8px 0 rgba(22, 22, 22, 0.9);
+  --radius: 14px;
   --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
   --font-serif: Georgia, "Times New Roman", "Songti SC", serif;
   --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
@@ -43,8 +43,7 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
-.cv-shell,
-.lab-shell {
+.cv-shell {
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
 }
@@ -137,8 +136,7 @@ a {
 .project-card,
 .method-card,
 .award-card,
-.experience-card,
-.lab-card {
+.experience-card {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--surface);
@@ -422,206 +420,6 @@ h2 {
   text-align: center;
 }
 
-body[data-variant="vercel"] {
-  --bg: #fafafa;
-  --surface: #ffffff;
-  --surface-2: #f5f5f5;
-  --ink: #171717;
-  --muted: #4d4d4d;
-  --quiet: #888888;
-  --line: #ebebeb;
-  --accent: #0070f3;
-  --accent-2: #ff0080;
-  --accent-soft: #d3e5ff;
-  --shadow: 0 2px 2px rgba(0, 0, 0, 0.04), 0 18px 50px rgba(0, 0, 0, 0.06);
-}
-
-body[data-variant="vercel"] .hero::before {
-  content: "";
-  position: absolute;
-  inset: 24px 24% auto auto;
-  width: min(520px, 54vw);
-  height: 240px;
-  pointer-events: none;
-  background:
-    radial-gradient(circle at 18% 32%, #007cf0, transparent 34%),
-    radial-gradient(circle at 52% 46%, #7928ca, transparent 38%),
-    radial-gradient(circle at 78% 36%, #ff0080, transparent 34%),
-    radial-gradient(circle at 72% 82%, #f9cb28, transparent 36%);
-  filter: blur(32px);
-  opacity: 0.32;
-}
-
-body[data-variant="vercel"] .hero-main,
-body[data-variant="vercel"] .hero-side {
-  position: relative;
-}
-
-body[data-variant="linear"] {
-  --bg: #050505;
-  --surface: #101112;
-  --surface-2: #151719;
-  --ink: #f7f8f8;
-  --muted: #9b9ca1;
-  --quiet: #6f7078;
-  --line: #25262c;
-  --accent: #6e75ee;
-  --accent-2: #b7b9ff;
-  --accent-soft: rgba(110, 117, 238, 0.12);
-  --shadow: 0 24px 80px rgba(0, 0, 0, 0.38);
-}
-
-body[data-variant="linear"] .cv-shell {
-  width: min(1240px, calc(100% - 32px));
-}
-
-body[data-variant="linear"] .hero-main,
-body[data-variant="linear"] .hero-side,
-body[data-variant="linear"] .method-card,
-body[data-variant="linear"] .project-card,
-body[data-variant="linear"] .award-card,
-body[data-variant="linear"] .experience-card {
-  background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.01)), var(--surface);
-}
-
-body[data-variant="linear"] .project-card,
-body[data-variant="linear"] .experience-card {
-  border-left: 3px solid var(--accent);
-}
-
-body[data-variant="replicate"] {
-  --bg: #f9f7f3;
-  --surface: #ffffff;
-  --surface-2: #f3f0e8;
-  --ink: #202020;
-  --muted: #575757;
-  --quiet: #8d8d8d;
-  --line: rgba(32, 32, 32, 0.13);
-  --accent: #ea2804;
-  --accent-2: #ff6a3d;
-  --accent-soft: rgba(234, 40, 4, 0.08);
-  --radius: 10px;
-  --shadow: 0 18px 50px rgba(32, 32, 32, 0.08);
-}
-
-body[data-variant="replicate"] h1 {
-  font-family: var(--font-serif);
-  font-weight: 700;
-}
-
-body[data-variant="replicate"] .project-card::before {
-  content: "model card";
-  width: fit-content;
-  color: var(--accent);
-  font-family: var(--font-mono);
-  font-size: 11px;
-}
-
-body[data-variant="cursor"] {
-  --bg: #f7f6f0;
-  --surface: #fffdf8;
-  --surface-2: #edeae0;
-  --ink: #26251e;
-  --muted: #6c675b;
-  --quiet: #918b7b;
-  --line: #ddd7c8;
-  --accent: #f54e00;
-  --accent-2: #111111;
-  --accent-soft: rgba(245, 78, 0, 0.09);
-  --radius: 12px;
-}
-
-body[data-variant="cursor"] .hero-side {
-  font-family: var(--font-mono);
-}
-
-body[data-variant="cursor"] .signature-block {
-  background: #1f1f1f;
-  color: #f7f6f0;
-}
-
-body[data-variant="cursor"] .signature-block p {
-  color: #d8d2c5;
-}
-
-body[data-variant="notion"] {
-  --bg: #fbfaf8;
-  --surface: #ffffff;
-  --surface-2: #f5f1ea;
-  --ink: #242424;
-  --muted: #5f5b55;
-  --quiet: #9b958c;
-  --line: #e5ded2;
-  --accent: #2f7d63;
-  --accent-2: #8f62d4;
-  --accent-soft: rgba(47, 125, 99, 0.1);
-  --radius: 8px;
-  --shadow: 0 12px 34px rgba(40, 36, 30, 0.08);
-}
-
-body[data-variant="notion"] .hero {
-  grid-template-columns: minmax(280px, 0.38fr) minmax(0, 1fr);
-}
-
-body[data-variant="notion"] .hero-main {
-  order: 2;
-}
-
-body[data-variant="notion"] .hero-side {
-  order: 1;
-  box-shadow: none;
-}
-
-body[data-variant="notion"] .method-card,
-body[data-variant="notion"] .project-card,
-body[data-variant="notion"] .award-card,
-body[data-variant="notion"] .experience-card {
-  box-shadow: none;
-}
-
-body[data-variant="wired"] {
-  --bg: #fdfcf8;
-  --surface: #fdfcf8;
-  --surface-2: #f2f0ea;
-  --ink: #090909;
-  --muted: #444444;
-  --quiet: #777777;
-  --line: #1d1d1d;
-  --accent: #034ea2;
-  --accent-2: #0a0a0a;
-  --accent-soft: rgba(3, 78, 162, 0.08);
-  --radius: 0px;
-  --shadow: none;
-}
-
-body[data-variant="wired"] .cv-nav,
-body[data-variant="wired"] .hero-main,
-body[data-variant="wired"] .hero-side,
-body[data-variant="wired"] .project-card,
-body[data-variant="wired"] .method-card,
-body[data-variant="wired"] .award-card,
-body[data-variant="wired"] .experience-card {
-  border-right: 0;
-  border-left: 0;
-}
-
-body[data-variant="wired"] h1,
-body[data-variant="wired"] h2 {
-  font-family: var(--font-serif);
-  font-weight: 800;
-  text-transform: none;
-}
-
-body[data-variant="wired"] .hero {
-  grid-template-columns: minmax(0, 1fr);
-  min-height: auto;
-  border-top: 5px solid var(--ink);
-}
-
-body[data-variant="wired"] .hero-main {
-  box-shadow: none;
-}
-
 body[data-variant="figma"] {
   --bg: #f5f5f2;
   --surface: #ffffff;
@@ -666,67 +464,13 @@ body[data-variant="figma"] .award-card:nth-child(1) {
   background: #c9f4ef;
 }
 
-.lab-shell {
-  padding: 28px 0 60px;
-}
-
-.lab-hero {
-  display: grid;
-  gap: 18px;
-  padding: 44px 0 24px;
-  border-bottom: 1px solid var(--line);
-}
-
-.lab-hero h1 {
-  max-width: 940px;
-}
-
-.lab-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-  padding: 24px 0;
-}
-
-.lab-card {
-  display: grid;
-  min-height: 252px;
-  padding: 18px;
-  transition: transform 160ms ease, box-shadow 160ms ease;
-}
-
-.lab-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow);
-}
-
-.lab-card .sample {
-  min-height: 98px;
-  margin: -18px -18px 16px;
-  border-bottom: 1px solid var(--line);
-  border-radius: var(--radius) var(--radius) 0 0;
-  background: var(--sample);
-}
-
-.lab-card h2 {
-  font-size: 24px;
-}
-
-.lab-card p {
-  margin: 8px 0 0;
-  color: var(--muted);
-  font-size: 14px;
-}
-
 @media (max-width: 920px) {
   .hero,
-  body[data-variant="notion"] .hero,
   .section-head,
   .method-grid,
   .project-grid,
   .award-grid,
-  .experience-card,
-  .lab-grid {
+  .experience-card {
     grid-template-columns: 1fr;
   }
 
@@ -739,16 +483,10 @@ body[data-variant="figma"] .award-card:nth-child(1) {
   .nav-links {
     justify-content: flex-start;
   }
-
-  body[data-variant="notion"] .hero-main,
-  body[data-variant="notion"] .hero-side {
-    order: initial;
-  }
 }
 
 @media (max-width: 560px) {
-  .cv-shell,
-  .lab-shell {
+  .cv-shell {
     width: min(100% - 20px, 1180px);
   }
 
@@ -757,8 +495,7 @@ body[data-variant="figma"] .award-card:nth-child(1) {
   .method-card,
   .project-card,
   .award-card,
-  .experience-card,
-  .lab-card {
+  .experience-card {
     padding: 16px;
   }
 
