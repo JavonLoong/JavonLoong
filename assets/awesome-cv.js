@@ -188,7 +188,7 @@
           <div class="actions">
             <a class="button-link primary" href="#projects">查看项目证据</a>
             <a class="button-link" href="mailto:${esc(person.email)}">联系邮箱</a>
-            <a class="button-link" href="${isNested ? "../resume/javon-ai-resume.pdf" : "resume/javon-ai-resume.pdf"}">PDF 简历</a>
+            <a class="button-link" href="${isNested ? "../resume/javon-formal-cv.pdf" : "resume/javon-formal-cv.pdf"}">PDF 简历</a>
           </div>
         </div>
         <aside class="hero-side">

@@ -9,9 +9,9 @@
   ·
   <a href="cv.html">正式 CV</a>
   ·
-  <a href="resume/javon-ai-resume.pdf">PDF 简历</a>
+  <a href="resume/javon-formal-cv.pdf">PDF 简历</a>
   ·
-  <a href="resume/javon-ai-resume.tex">LaTeX 源码</a>
+  <a href="resume/javon-formal-cv.tex">LaTeX 源码</a>
   ·
   <a href="https://github.com/JavonLoong">GitHub</a>
   ·
@@ -58,8 +58,8 @@
 - `cv.html`：Figma 风格独立正式 CV 页面。
 - `assets/profile-preview.svg`：README 头图。
 - `assets/resume-data.js`：网页简历共用的结构化履历数据。
-- `resume/javon-ai-resume.pdf`：A4 单页 PDF 简历。
-- `resume/javon-ai-resume.tex`：可编辑 LaTeX 简历源码。
+- `resume/javon-formal-cv.pdf`：A4 两页正式 PDF CV。
+- `resume/javon-formal-cv.tex`：可编辑 LaTeX CV 源码。
 
 ## 内容参考
 
